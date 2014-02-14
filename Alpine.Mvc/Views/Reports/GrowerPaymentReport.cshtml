@@ -1,0 +1,207 @@
+﻿@using Alpine.Core.Domain.Payment
+@model Alpine.Controllers.ViewModels.ReportView
+
+@{
+    ViewBag.Title = "GrowerPaymentReport";
+}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        @Styles.Render("~/Content/css")
+        <!--[if IE]> <link href="css/ie.css" rel="stylesheet" type="text/css"> <![endif]-->
+        @Scripts.Render("~/bundles/jquery")
+        @*<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>*@
+        @*@Scripts.Render("~/bundles/jqueryui")*@
+        @Scripts.Render("~/bundles/jqueryval")
+        @Scripts.Render("~/bundles/alpine")
+        @*<script src="~/Scripts/plugins/charts/excanvas.min.js"></script>
+        <script src="~/Scripts/kendo.all.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/charts/jquery.sparkline.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/ui/jquery.collapsible.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/forms/jquery.inputlimiter.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/forms/jquery.maskedinput.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/forms/jquery.tagsinput.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/forms/jquery.uniform.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/forms/jquery.select2.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/tables/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/ui/jquery.fullcalendar.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/ui/jquery.timepicker.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/bootstrap/bootstrap.min.js"></script>*@
+        @Scripts.Render("~/bundles/alpine2")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+    <section id="topnav">
+            @Html.Action("Menu", "TopNavBar")
+        </section>
+        <div id="mainwrapper" class="wrapper">
+
+	        <!-- Left sidebar -->
+            <section id="sidebar">
+                @Html.Action("Navigation", "Sidebar", new { sideBar = @Model.UserAccount.SideBar });
+            </section>
+            <!-- /left sidebar -->
+            <!-- Main content -->
+            <div class="content">
+                <div id="body">
+                    <div class="page-header"><!-- Page header -->
+                        <h5>
+                            <i class="font-calendar"></i>
+                            Grower Payment Report
+                        </h5>
+                        <div class="pull-right">
+                            <span style="font-size: 16px; font-weight: bold;"> Crop Year:&nbsp; </span>
+                            @Html.DropDownList("ddlcropyears", @Model.UserAccount.CropYears, new { @style = "width: 75px;"})
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /page header -->
+    @*<div>
+        <telerik:RadGrid 
+        ID="rgPaymentReport" 
+        runat="server" 
+        AllowPaging="false"
+        AutoGenerateColumns="false"
+        AllowSorting="True" 
+        GridLines="None" 
+        ShowStatusBar="true"
+        OnNeedDataSource="NeedDataSource"
+        EnableEmbeddedSkins="false"
+        ShowFooter="true"
+        Skin="Insight">
+            <MasterTableView 
+            CommandItemDisplay="None"
+            EnableNoRecordsTemplate="true"
+            NoMasterRecordsText="No data found."
+            ItemStyle-VerticalAlign="Top"
+            AlternatingItemStyle-VerticalAlign="Top"
+            DataKeyNames="cust_desc">
+                <Columns>
+                    <telerik:GridTemplateColumn
+                    HeaderText="Grower"
+                    SortExpression="cust_desc"
+                    DataField="cust_desc"
+                    UniqueName="cust_desc">
+                        <ItemTemplate>
+                            <%# Eval("cust_desc") %>
+                        </ItemTemplate>
+                    </telerik:GridTemplateColumn>
+                    <telerik:GridTemplateColumn
+                    HeaderText="Delivered Weight"
+                    SortExpression="wght"
+                    DataField="wght"
+                    UniqueName="wght">
+                        <ItemTemplate>
+                            <%# string.Format("{0:0,0.00}", Eval("wght")) %>
+                        </ItemTemplate>
+                    </telerik:GridTemplateColumn>
+                    <telerik:GridTemplateColumn
+                    HeaderText="Payment 1 Actual Date"
+                    SortExpression="payment1Date"
+                    DataField="payment1Date"
+                    UniqueName="payment1Date">
+                        <ItemTemplate>
+                           <%# string.IsNullOrEmpty(Eval("payment1Date").ToString()) == false ? DateTime.Parse(Eval("payment1Date").ToString()).ToShortDateString() : "--"%>
+                        </ItemTemplate>
+                    </telerik:GridTemplateColumn>
+                    <telerik:GridTemplateColumn
+                    HeaderText="Payment 1 Contract Date"
+                    SortExpression="payment1ContractDate"
+                    DataField="payment1ContractDate"
+                    UniqueName="payment1ContractDate">
+                        <ItemTemplate>
+                           <%# string.IsNullOrEmpty(Eval("payment1ContractDate").ToString()) == false ? DateTime.Parse(Eval("payment1ContractDate").ToString()).ToShortDateString() : "--"%>
+                        </ItemTemplate>
+                    </telerik:GridTemplateColumn>
+                    <telerik:GridTemplateColumn
+                    HeaderText="Payment 1 Paid"
+                    SortExpression="payment1amount"
+                    DataField="payment1amount"
+                    UniqueName="payment1amount">
+                        <ItemTemplate>
+                           <%# string.IsNullOrEmpty(Eval("payment1amount").ToString()) == false ? string.Format("{0:c}",Eval("payment1amount")) : "--"%>
+                        </ItemTemplate>
+                    </telerik:GridTemplateColumn>
+                    <telerik:GridTemplateColumn
+                    HeaderText="Payment 2 Actual Date"
+                    SortExpression="payment2Date"
+                    DataField="payment2Date"
+                    UniqueName="payment2Date">
+                        <ItemTemplate>
+                           <%# string.IsNullOrEmpty(Eval("payment2Date").ToString()) == false ? DateTime.Parse(Eval("payment2Date").ToString()).ToShortDateString() : "--"%>
+                        </ItemTemplate>
+                    </telerik:GridTemplateColumn>
+                    <telerik:GridTemplateColumn
+                    HeaderText="Payment 2 Contract Date"
+                    SortExpression="payment2ContractDate"
+                    DataField="payment2ContractDate"
+                    UniqueName="payment2ContractDate">
+                        <ItemTemplate>
+                           <%# string.IsNullOrEmpty(Eval("payment2ContractDate").ToString()) == false ? DateTime.Parse(Eval("payment2ContractDate").ToString()).ToShortDateString() : "--"%>
+                        </ItemTemplate>
+                    </telerik:GridTemplateColumn>
+                    <telerik:GridTemplateColumn
+                    HeaderText="Payment 2 Paid"
+                    SortExpression="payment2amount"
+                    DataField="payment2amount"
+                    UniqueName="payment2amount">
+                        <ItemTemplate>
+                           <%# string.IsNullOrEmpty(Eval("payment2amount").ToString()) == false ? string.Format("{0:c}",Eval("payment2amount")) : "--"%>
+                        </ItemTemplate>
+                    </telerik:GridTemplateColumn>
+                    <telerik:GridTemplateColumn
+                    HeaderText="Payment 3 Actual Date"
+                    SortExpression="payment3Date"
+                    DataField="payment3Date"
+                    UniqueName="payment3Date">
+                        <ItemTemplate>
+                           <%# string.IsNullOrEmpty(Eval("payment3Date").ToString()) == false ? DateTime.Parse(Eval("payment3Date").ToString()).ToShortDateString() : "--"%>
+                        </ItemTemplate>
+                    </telerik:GridTemplateColumn>
+                    <telerik:GridTemplateColumn
+                    HeaderText="Payment 3 Contract Date"
+                    SortExpression="payment3ContractDate"
+                    DataField="payment3ContractDate"
+                    UniqueName="payment3ContractDate">
+                        <ItemTemplate>
+                           <%# string.IsNullOrEmpty(Eval("payment3ContractDate").ToString()) == false ? DateTime.Parse(Eval("payment3ContractDate").ToString()).ToShortDateString() : "--"%>
+                        </ItemTemplate>
+                    </telerik:GridTemplateColumn>
+                    <telerik:GridTemplateColumn
+                    HeaderText="Payment 3 Paid"
+                    SortExpression="payment3amount"
+                    DataField="payment3amount"
+                    UniqueName="payment3amount">
+                        <ItemTemplate>
+                           <%# string.IsNullOrEmpty(Eval("payment3amount").ToString()) == false ? string.Format("{0:c}",Eval("payment3amount")) : "--"%>
+                        </ItemTemplate>
+                    </telerik:GridTemplateColumn>
+                    <telerik:GridTemplateColumn
+                    HeaderText="Final Payment"
+                    SortExpression="finalpricingamount"
+                    DataField="finalpricingamount"
+                    UniqueName="finalpricingamount">
+                        <ItemTemplate>
+                           <%# string.IsNullOrEmpty(Eval("finalpricingamount").ToString()) == false ? string.Format("{0:c}",Eval("finalpricingamount")) : "--"%>
+                        </ItemTemplate>
+                    </telerik:GridTemplateColumn>
+                    <telerik:GridTemplateColumn
+                    HeaderText="Total Other Payments"
+                    SortExpression="totalotherpayments"
+                    DataField="totalotherpayments"
+                    UniqueName="totalotherpayments">
+                        <ItemTemplate>
+                           <%# string.IsNullOrEmpty(Eval("totalotherpayments").ToString()) == false ? string.Format("{0:c}",Eval("totalotherpayments")) : "--"%>
+                        </ItemTemplate>
+                    </telerik:GridTemplateColumn>
+                </Columns>
+            </MasterTableView>
+        </telerik:RadGrid>
+    </div>*@
+    </body>
+</html>

@@ -1,0 +1,45 @@
+﻿@using Alpine.Controllers.ViewModels
+@using Alpine.Core
+@model TopNavBarView
+
+<div id="top">
+    <div class="top-wrapper">
+        <a href="/Index" title="">
+            <img src="/images/logo.png" class="logo" alt="" />
+        </a>
+        <ul class="topnav">
+            <li class="topuser">
+                <a title="" data-toggle="dropdown">
+                    <img src="@Model.SelectedUser.Avatar" height="28" width="28" alt="" />
+                    <span>@Model.SelectedUser.FirstName @Model.SelectedUser.LastName</span>
+                    
+                </a>
+                
+            </li>
+            @*<li>
+                <a href="#" title="">
+                    <b class="mail"></b>
+                </a>
+            </li>
+            <li class="search">
+                <a title="">
+                    <b class="search"></b>
+                </a>
+                <form class="top-search" action="#">
+                    <input type="text" placeholder="Search..." />
+                    <input type="submit" value="" />
+                </form>
+            </li>*@
+            <li class="sidebar-button">
+                <a href="#" title="">
+                    <b class="responsive-nav"></b>
+                </a>
+            </li>
+            <li>
+                <a href="@Url.Action("SignOut", "Login")" title="Logout">
+                    <b class="logout"></b>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+﻿@using Alpine.Services.ViewModels
+@using Alpine.Controllers.ViewModels
+@using System.Drawing
+@using EO.Pdf
+@using Alpine.Core
+
+@model Alpine.Controllers.ViewModels.UserAccount.UserAccountView
+
+
+@{
+    ViewBag.Title = "Master Schedule - Grower Payments System";
+}
+<script src="/Scripts/alpine/alpine.js"></script>
+<script src="/Scripts/alpine/domainObjects.js"></script>
+@section featured {
+    <section class="featured">
+        <div class="page-header"><!-- Page header -->
+            <h5>
+                <i class="font-calendar"></i>
+                Master Schedule
+            </h5>
+            <div class="pull-right">
+                <h5>Select Crop Year:&nbsp; </h5>
+            @Html.DropDownList("ddlcropyears", @Model.CropYears, new { @style = "width: 75px;"})
+            </div>
+        </div><!-- /page header -->
+        <div id="assessmentsContainer" >
+            @Html.Action("Assessments", "MasterSchedule")
+        </div>
+        <div id="varietiesContainer">
+            @Html.Action("Varieties", "MasterSchedule")
+        </div>
+        <div id="paymentsContainer">
+            @Html.Action("Payments", "MasterSchedule")
+        </div>
+    </section>
+}
+<script type="text/javascript">
+    $("#ddlcropyears").val(@SecurityContextManager.Current.CurrentCropYear);
+    loadAssessments();
+</script>

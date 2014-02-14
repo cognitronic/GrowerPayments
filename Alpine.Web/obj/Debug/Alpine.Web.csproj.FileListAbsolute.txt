@@ -1,0 +1,82 @@
+D:\Projects\Alpine\Alpine.Web\obj\Debug\Alpine.Web.csprojResolveAssemblyReference.cache
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Alpine.Web.dll
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Alpine.Web.pdb
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Alpine.Core.dll
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Alpine.Infrastructure.dll
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Alpine.Services.dll
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Couchbase.AspNet.dll
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Couchbase.dll
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Enyim.Caching.dll
+D:\Projects\Alpine\Alpine.Web\bin\Debug\MemcachedProviders.dll
+D:\Projects\Alpine\Alpine.Web\bin\Debug\log4net.dll
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Alpine.Core.pdb
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Alpine.Infrastructure.pdb
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Alpine.Services.pdb
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Couchbase.pdb
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Couchbase.xml
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Couchbase.AspNet.pdb
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Enyim.Caching.pdb
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Enyim.Caching.xml
+D:\Projects\Alpine\Alpine.Web\bin\Debug\MemcachedProviders.pdb
+D:\Projects\Alpine\Alpine.Web\bin\Debug\log4net.xml
+D:\Projects\Alpine\Alpine.Web\obj\Debug\Alpine.Web.dll
+D:\Projects\Alpine\Alpine.Web\obj\Debug\Alpine.Web.pdb
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Projects\Alpine\Alpine.Web\bin\Debug\System.Web.Http.dll
+D:\Projects\Alpine\Alpine.Web\bin\Debug\StructureMap.dll
+D:\Projects\Alpine\Alpine.Web\bin\Debug\WebActivator.dll
+D:\Projects\Alpine\Alpine.Web\bin\Debug\System.Web.Http.WebHost.dll
+D:\Projects\Alpine\Alpine.Web\bin\Debug\System.Net.Http.Formatting.dll
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\Projects\Alpine\Alpine.Web\bin\Debug\System.Web.Http.xml
+D:\Projects\Alpine\Alpine.Web\bin\Debug\StructureMap.pdb
+D:\Projects\Alpine\Alpine.Web\bin\Debug\StructureMap.xml
+D:\Projects\Alpine\Alpine.Web\bin\Debug\System.Web.Http.WebHost.xml
+D:\Projects\Alpine\Alpine.Web\bin\Debug\System.Net.Http.Formatting.xml
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\Alpine\Alpine.Web\bin\Debug\AutoMapper.dll
+D:\Projects\Alpine\Alpine.Web\bin\Debug\AutoMapper.xml
+D:\Projects\Alpine\Alpine.Web\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Alpine.Web.dll
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Alpine.Web.pdb
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Alpine.Core.dll
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Alpine.Infrastructure.dll
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Alpine.Services.dll
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Couchbase.AspNet.dll
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Couchbase.dll
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Enyim.Caching.dll
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\MemcachedProviders.dll
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\StructureMap.dll
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\System.Net.Http.Formatting.dll
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\System.Web.Http.dll
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\System.Web.Http.WebHost.dll
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\WebActivator.dll
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\log4net.dll
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\AutoMapper.dll
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Alpine.Core.pdb
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Alpine.Infrastructure.pdb
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Alpine.Services.pdb
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Couchbase.pdb
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Couchbase.xml
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Couchbase.AspNet.pdb
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Enyim.Caching.pdb
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Enyim.Caching.xml
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\MemcachedProviders.pdb
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\StructureMap.pdb
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\StructureMap.xml
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\System.Net.Http.Formatting.xml
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\System.Web.Http.xml
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\System.Web.Http.WebHost.xml
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\log4net.xml
+C:\Projects\Alpine Pacific\Alpine.Web\bin\Debug\AutoMapper.xml
+C:\Projects\Alpine Pacific\Alpine.Web\obj\Debug\Alpine.Web.csprojResolveAssemblyReference.cache
+C:\Projects\Alpine Pacific\Alpine.Web\obj\Debug\Alpine.Web.dll
+C:\Projects\Alpine Pacific\Alpine.Web\obj\Debug\Alpine.Web.pdb

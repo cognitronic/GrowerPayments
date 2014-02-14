@@ -1,0 +1,122 @@
+﻿@using Alpine.Core.Domain.Variety
+
+@model IList<Alpine.Services.ViewModels.VarietyView>
+<script src="~/Scripts/alpine/alpine.js"></script>
+<script src="~/Scripts/functions/custom.js"></script>
+<div class="body">
+    <div class="block well">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <h5>Varieties </h5>
+                <div class="nav pull-right">
+                    <a class="dropdown-toggle just-icon" data-toggle="collapse" data-target="#varieties"><i class="font-resize-vertical"></i></a>
+                </div>
+            </div>
+        </div>
+        @using (Html.BeginForm(null, null, FormMethod.Post, new { @id = "varietiesForm" }))
+        {
+        <div id="varieties" class="collapse table-overflow">
+            <table id="tblVarieties" class="table table-striped table-bordered table-block align-center">
+                <thead>
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                @if(@Model != null && @Model.Count() > 0)
+                {
+                     foreach(var item in @Model)
+                    {   
+                        <tr itemid="@item.ID" class="control-group">
+                            <td style="width: 300px;" class="controls">
+                                <input type="text" id="varietyName_@item.ID" name="varietyName_@item.ID" class="span6" value="@item.Name"/>
+                            </td>
+                            <td class="controls">
+                                <input type="text" id="varietyDescription_@item.ID" name="varietyDescription_@item.ID" class="span6" value="@item.Description" />
+                            </td>
+                            <td style="width: 100px;">
+                                <button id="lbDeleteVariety_@item.ID" itemid="@item.ID" title="Delete Variety" class="confirmdelete deletevariety btn btn-small btn-danger btn-block">
+                                    <i class="icon-remove"></i> Delete
+                                </button>
+                            </td>
+                        </tr>
+                        }   
+                    
+                    }  
+                        <tr itemid="" item="" class="tr-new-item control-group">
+                            <td style="width: 300px" class="controls">
+                                @Html.TextBox("New_varietyName", "", new { @class = "span6" })
+                            </td>
+                            <td>
+                                @Html.TextBox("New_varietyDescription", "", new { @class = "span6"})
+                            </td>
+                            <td style="width: 100px;">
+                                
+                                <button id="btnSaveNewVariety" type="button"  class="btn btn-small btn-success btn-block" >
+                                    <i class="font-plus"></i>Save
+                                </button>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+       }
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $(".deletevariety").click(function (e) {
+        var sibling = $(this).parent().parent().prev('tr');
+        var ctl = this;
+        e.preventDefault();  //prevent default form submit behaviour
+        bootbox.confirm("This will completely remove all data associated with this item.  Are you sure you want to delete?", function (result) {
+            if (result) {
+                $.ajax({
+                    url: baseUrl + 'api/varieties/RemoveVariety',
+                    type: 'GET',
+                    data: 'variety=' + $(ctl).attr("itemid").trim(),
+                    dataType: "json",
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data) {
+                        loadVarieties();
+                        $(sibling).effect("highlight", { color: "#7fd658" }, 3000);
+                    },
+                    error: function (x, y, z) {
+                        alert(x + '\n' + y + '\n' + z);
+                    }
+                });
+            }
+        });
+    });
+
+    $("#btnSaveNewVariety").click(function (e) {
+        var sibling = $(this).parent().parent().prev('tr');
+        e.preventDefault();  //prevent default form submit behaviour
+        
+        var variety = new Variety();
+        variety.Name = $("#New_varietyName").val();
+        variety.Description = $("#New_varietyDescription").val();
+
+        $.ajax({
+            url: baseUrl + 'api/varieties/CreateVariety',
+            type: 'POST',
+            data: JSON.stringify(variety),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                loadVarieties();
+                $(sibling).effect("highlight", { color: "#7fd658" }, 3000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    });
+
+</script>

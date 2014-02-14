@@ -1,0 +1,429 @@
+﻿@using Alpine.Core.Domain.Assessment
+@model Alpine.Controllers.ViewModels.Assessments.AssessmentsView
+
+@if (@Model.CanRunSetup)
+{
+    <div style="margin-top: 10px;">
+        <button id="btnRunNewYearSetup" title="Run New Crop Year Setup" class="btn btn-small btn-info btn-block confirm">
+            <i class="icon-globe"></i> Run New Year Setup
+        </button>
+    </div> 
+}
+<div class="body">
+    <div class="block well">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <h5>Assessments </h5>
+                <div class="nav pull-right">
+                    <a class="dropdown-toggle just-icon" data-toggle="dropdown"><i class="font-cog"></i></a>
+                    <ul class="dropdown-menu pull-right">
+                        <li>
+                            <a href="#">
+                                <i class="font-share"></i>Export
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="font-envelope"></i>Email
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        @using (Html.BeginForm(null, null, FormMethod.Post, new { @id = "assessmentForm" }))
+        {
+        <div class="table-overflow">
+            <table id="tblAssessments" class="table table-striped table-bordered table-block align-center">
+                <thead>
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Price Per In Shell Lb.
+                        </th>
+                        <th>
+                            Crop Year
+                        </th>
+                        <th>
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                @if(@Model != null && @Model.Assessments != null && @Model.Assessments.Count > 0)
+                {
+                        
+                    foreach(var item in @Model.Assessments)
+                    {   
+                        <tr itemid="@item.ID" item="@item.ToJSON()" class="control-group">
+                            <td style="width: 300px;" class="controls">
+                                <span id="assessmentName_@item.ID" name="assessmentName_@item.ID" type="area" class="convert-to-input span6">
+                                    @item.Name
+                                </span>
+                            </td>
+                            <td class="controls">
+                                <span type="input" id="assessmentPricePerInShellPound_@item.ID" name="assessmentPricePerInShellPound_@item.ID" class="convert-to-input">
+                                    @item.PricePerInShellPound.ToString()
+                                </span>
+                            </td>
+                            <td class="controls">
+                                <span type="input" id="assessmentCropYear_@item.ID" class="convert-to-input" name="assessmentCropYear_@item.ID">
+                                    @item.CropYear
+                                </span>
+                            </td>
+                            <td style="width: 100px;">
+                                @if(!item.AppliedToAll)
+                                {
+                                    <button id="lbApplyAssessment_@item.ID" itemid="@item.ID" title="Apply Assessment To All" class="applyassessment btn btn-small btn-warning btn-block confirm">
+                                    <i class="icon-globe"></i> Apply To All
+                                </button>
+                                }
+                                <button id="lbDeleteAssessment_@item.ID" itemid="@item.ID" title="Delete Assessment" class="deleteassessment btn btn-small btn-danger btn-block confirm">
+                                    <i class="icon-remove"></i> Delete
+                                </button>
+                            </td>
+                        </tr>
+                        }
+                    }  
+                        <tr itemid="" item="" class="tr-new-item control-group">
+                            <td style="width: 300px" class="controls">
+                                @Html.TextArea("New_assessmentName", new { @class = "auto in-edit convert-to-label ", @style = "-ms-word-wrap: break-word; word-wrap: break-word; resize: none; width: 280px; height: 40px;" })
+                            </td>
+                            <td>
+                                @Html.TextBox("New_assessmentPricePerInShellPound", "", new { @class = "in-edit convert-to-label maskThreeDecimalPoints"})
+                            </td>
+                            <td>
+                                @Html.TextBox("New_assessmentCropYear", "", new { @class = "in-edit convert-to-label" })
+                            </td>
+                            <td style="width: 100px;">
+                                
+                                <button id="btnSaveNewAssessment" type="button"  class="btn btn-small btn-success btn-block" onclick="saveNewAssessment()">
+                                    <i class="font-plus"></i>Save
+                                </button>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+       }
+    </div>
+</div>
+
+<script type="text/javascript">
+   
+   
+
+    initializeControlConversions();
+    validateAssessments();
+
+    function Assessment() {
+        this.ID = 0;
+        this.Name = "";
+        this.PricePerInShellPound = "";
+        this.CropYear = "";
+        this.ChangedBy = 0;
+        this.AppliedToAll = false;
+        this.EnteredBy = 0;
+        this.LastUpdated = dateToWcf(CurrentDate());
+        this.DateCreated = dateToWcf(CurrentDate());
+    }
+
+    function convertHTMLControls(control, convertToType, options) {
+        switch (convertToType) {
+            case "input":
+                var classList = $(control).attr('class').split(' ');
+                var classes = '';
+                $.each(classList, function (index, item) {
+                    if (item === 'convert-to-input') {
+                        item = 'convert-to-span'
+                    }
+                    classes += item + " ";
+                });
+                switch ($(control).attr("type")) {
+                    case "area":
+                        $(control).replaceWith("<textarea id='"
+                            + $(control).attr("id")
+                            + "' name='"
+                            + $(control).attr("name")
+                            + "' type='area' style='word-wrap: break-word; resize: none; width: 280px; height: 40px;' class='required auto in-edit "
+                            + classes + "' vitem='"
+                            + $("#" + $(control).attr("id")).parent().parent().attr("item") + "'>"
+                            + $(control).text().trim()
+                            + "</textarea>");
+                        break;
+                    case "input":
+                        $(control).replaceWith("<input type='input' name='"
+                            + $(control).attr("name")
+                            + "' id='"
+                            + $(control).attr("id")
+                            + "' class='number in-edit "
+                            + classes + "' value='"
+                            + $(control).text().trim()
+                            + "' item='"
+                            + $("#" + $(control).attr("id")).parent().parent().attr("item") + "'/>");
+                        break;
+                }
+                $("#" + $(control).attr("id")).focus();
+                $("#" + $(control).attr("id")).on('blur', function () {
+                    //validateAssessments();
+                    
+                    if ($("#assessmentForm").valid()) {
+                        var assessment = new Assessment();
+                        var item = $.parseJSON($("#" + $(control).attr("id")).parent().parent().attr("item"));
+                        $("#" + $(control).attr("id")).parent().removeClass("trbackground");
+                        assessment.ID = item.ID;
+                        assessment.CropYear = item.CropYear;
+                        assessment.Name = item.Name;
+                        assessment.PricePerInShellPound = item.PricePerInShellPound;
+
+                        if ($("#" + $(control).attr("id")).attr('id').indexOf("assessmentName") == 0) {
+                            //alert( "Yo " + item.Name);
+                            //alert("Name " + $("#" + $(control).attr("id")).attr('id'));
+                            assessment.Name = $("#" + $(control).attr("id")).val();
+
+                        }
+                        else if ($("#" + $(control).attr("id")).attr('id').indexOf("assessmentPricePerInShellPound") == 0) {
+                            //alert("price " + $("#" + $(control).attr("id")).attr('id'));
+                            assessment.PricePerInShellPound = $("#" + $(control).attr("id")).val();
+                        }
+                        else {
+                            //alert("Crop " + $("#" + $(control).attr("id")).attr('id'));
+                            assessment.CropYear = $("#" + $(control).attr("id")).val();
+                        }
+
+                        saveAssessment(JSON.stringify(assessment), $("#" + $(control).attr("id")).parent());
+                        convertHTMLControls(this, "label", "convert-to-input")
+                        wireUpConvertions($("#" + $(control).attr("id")), "input");
+
+                    }
+                });
+                break;
+            case "label":
+                $(control).replaceWith("<span id='"
+                    + $(control).attr('id')
+                    + "' type='" + $(control).attr('type')
+                    + "' class='" + options + "'>"
+                    + $(control).val()
+                    + "</span>");
+                wireUpConvertions($("#" + $(control).attr("id")), "input");
+                break;
+        }
+    }
+
+    function wireUpConvertions(control, type) {
+        $(control).on({
+            click: function () {
+                $('textarea[id^="New_assessmentName"]').rules("remove");
+                $('input[id^="New_assessmentCropYear"]').rules("remove");
+                $('input[id^="New_assessmentPricePerInShellPound"]').rules("remove");
+                convertHTMLControls(this, type, "");
+            },
+            mouseover: function () {
+                $(this).addClass("fauxinput");
+                $(this).parent().addClass("trbackground");
+            },
+            mouseout: function () {
+                $(this).removeClass("fauxinput");
+                $(this).parent().removeClass("trbackground");
+            }
+        });
+
+    }
+
+    function initializeControlConversions() {
+        
+        $(".convert-to-input").each(function () {
+            wireUpConvertions(this, "input");
+        });
+
+    }
+
+    /*----------------------- START ASSESSMENTS ---------------------*/
+
+    function saveAssessment(assessment, control) {
+
+        if ($('input[id^="New_assessmentCropYear"]').length)
+            $('input[id^="New_assessmentCropYear"]').rules("add", { required: true, digits: true });
+        if ($('input[id^="New_assessmentPricePerInShellPound"]').length)
+            $('input[id^="New_assessmentPricePerInShellPound"]').rules("add", { required: true, number: true });
+        if ($('textarea[id^="New_assessmentName"]').length)
+            $('textarea[id^="New_assessmentName"]').rules("add", { required: true });
+        $.ajax({
+            url: baseUrl + 'api/assessments/postassessment',
+            type: 'POST',
+            data: assessment,
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                $(control).effect("highlight", { color: "#96C161" }, 3000)
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    }
+
+
+
+
+    /*----------------------- END ASSESSMENTS ---------------------*/
+    //Validate Assessment form
+    function validateAssessments() {
+        $("#assessmentForm").validate({
+            highlight: function (label) {
+                $(label).closest('.control-group').addClass('error trbgerror');
+                $(label).fadeOut(function () {
+                    $(label).fadeIn();
+                });
+            },
+            unhighlight: function (label) {
+                $(label).closest('.control-group').removeClass('error trbgerror');
+            },
+            success: function (label) {
+                $(label).closest('.control-group').removeClass('error');
+                //$(label).closest('.control-group').effect("highlight", { color: "#7fd658" }, 3000);
+                label
+                    .addClass('valid')
+                    .closest('.control-group').addClass('success');
+            }
+        });
+    }
+
+    
+    function saveNewAssessment() {
+
+        if ($('input[id^="New_assessmentCropYear"]').length)
+            $('input[id^="New_assessmentCropYear"]').rules("add", { required: true, digits: true });
+        if ($('input[id^="New_assessmentPricePerInShellPound"]').length)
+            $('input[id^="New_assessmentPricePerInShellPound"]').rules("add", { required: true, number: true });
+        if ($('textarea[id^="New_assessmentName"]').length)
+            $('textarea[id^="New_assessmentName"]').rules("add", { required: true });
+        
+        if ($("#assessmentForm").valid()) {
+            var assessment = new Assessment();
+            assessment.Name = $("#New_assessmentName").val();
+            assessment.CropYear = $("#New_assessmentCropYear").val();
+            assessment.PricePerInShellPound = $("#New_assessmentPricePerInShellPound").val();
+            $.ajax({
+                url: baseUrl + 'api/assessments/postassessment',
+                type: 'POST',
+                data: JSON.stringify(assessment),
+                dataType: "json",
+                contentType: "application/json;charset=utf-8",
+                success: function (data) {
+                    loadAssessments();
+                    $('#tblAssessments tbody>tr:last').prev('tr').effect("highlight", { color: "#7fd658" }, 3000);
+                },
+                error: function (x, y, z) {
+                    alert(x + '\n' + y + '\n' + z);
+                }
+            });
+        }
+    }
+
+    $(".deleteassessment").click(function (e) {
+        var sibling = $(this).parent().parent().prev('tr');
+        e.preventDefault();  //prevent default form submit behaviour
+        $.ajax({
+            url: baseUrl + 'api/assessments/RemoveAssessment',
+            type: 'GET',
+            data: 'assessment=' + $(this).attr("itemid").trim(),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                loadAssessments();
+                $(sibling).effect("highlight", { color: "#7fd658" }, 3000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    });
+
+    $(".applyassessment").click(function (e) {
+        var sibling = $(this).parent().parent().prev('tr');
+        var item = $(this).attr("itemid").trim();
+        e.preventDefault();  //prevent default form submit behaviour
+        bootbox.confirm("This action wil apply the assessment to every grower and cannot be reversed.  Are you sure you want to do this?", function (result) {
+            if (result) {
+                $.ajax({
+                    url: baseUrl + 'api/assessments/ApplyAssessmentToAll',
+                    type: 'GET',
+                    data: 'assessment=' + item,
+                    dataType: "json",
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data) {
+                        $.ajax({
+                            url: baseUrl + 'api/assessments/UpdateAssessmentAppliedToAll',
+                            type: 'GET',
+                            data: 'assessment=' + item,
+                            dataType: "json",
+                            contentType: "application/json;charset=utf-8",
+                            success: function (data) {
+                                loadAssessments();
+                                $(sibling).effect("highlight", { color: "#7fd658" }, 3000);
+                            },
+                            error: function (x, y, z) {
+                                alert(x + '\n' + y + '\n' + z);
+                            }
+                        });
+                    },
+                    error: function (x, y, z) {
+                        alert(x + '\n' + y + '\n' + z);
+                    }
+                });
+            }
+        });
+    });
+
+
+    $("#btnRunNewYearSetup").click(function (e) {
+        bootbox.confirm("This action will be applied to every grower with payments last year and cannot be reversed.  Are you sure you want to do this?", function (result) {
+            if (result) {
+                e.preventDefault();  //prevent default form submit behaviour
+                $.ajax({
+                    url: baseUrl + 'api/payments/RunNewCropYearSetup',
+                    type: 'GET',
+                    data: 'cropyear=' + $("#ddlcropyears option:selected").val(),
+                    dataType: "json",
+                    contentType: "application/json;charset=utf-8",
+                    success: function (data) {
+                        window.location = data.split(':')[2];
+                        $(sibling).effect("highlight", { color: "#7fd658" }, 3000);
+                    },
+                    error: function (x, y, z) {
+                        alert(x + '\n' + y + '\n' + z);
+                    }
+                });
+            }
+        });
+    });
+
+
+    $(function () {
+        $('#ddlcropyears').change(function () {
+            loadAssessments();
+        });
+    });
+    
+    function initSpinnerFunction() {
+        // this would be you first line (i.e. prepend to body)
+        $(".page-header").prepend("<div class='loadingdiv' id ='PleaseWait'><img src='/images/elements/loaders/6.gif'/></div>");
+        // OR if you want a jquery reference to the newly 
+        // created div for whatever reason
+        var newDiv = $("<div id ='PleaseWait' style='display:none;'></div>")
+                     .prependTo('body');
+        // then do rest of normal jquery stuff such as making div visible etc...
+    }
+
+    function exitSpinnerFunction(control) {
+        // normal spinner exit stuff followed by final line 
+        // which removes the pleasewait div from the DOM
+        $("#assessmentsContainer").remove("#PleaseWait");
+        // OR
+        $("#PleaseWait").remove();
+    }
+
+</script>

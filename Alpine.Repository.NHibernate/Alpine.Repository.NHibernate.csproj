@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E9B1BEF-B2A6-419A-B396-31C346BA015A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Alpine.Repository.NHibernate</RootNamespace>
+    <AssemblyName>Alpine.Repository.NHibernate</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\packages\FluentNHibernate.1.3.0.733\lib\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.3.3.2.4000\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mappings\AccountMap.cs" />
+    <Compile Include="Mappings\AssessmentMap.cs" />
+    <Compile Include="Mappings\CropYearSettingMap.cs" />
+    <Compile Include="Mappings\GrowerAssessmentMap.cs" />
+    <Compile Include="Mappings\GrowerMap.cs" />
+    <Compile Include="Mappings\GrowerNoteMap.cs" />
+    <Compile Include="Mappings\GrowerProfileMap.cs" />
+    <Compile Include="Mappings\PayeeMap.cs" />
+    <Compile Include="Mappings\PaymentMap.cs" />
+    <Compile Include="Mappings\PaymentVarietyMap.cs" />
+    <Compile Include="Mappings\ScheduleMap.cs" />
+    <Compile Include="Mappings\UserMap.cs" />
+    <Compile Include="Mappings\VarietyMap.cs" />
+    <Compile Include="NHibernateContractResolver.cs" />
+    <Compile Include="Repositories\AssessmentRepository.cs" />
+    <Compile Include="Repositories\BaseRepository.cs" />
+    <Compile Include="NHUnitOfWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryTranslator.cs" />
+    <Compile Include="Repositories\CropYearSettingRepository.cs" />
+    <Compile Include="Repositories\GrowerAssessmentRepository.cs" />
+    <Compile Include="Repositories\GrowerNoteRepository.cs" />
+    <Compile Include="Repositories\GrowerProfileRepository.cs" />
+    <Compile Include="Repositories\GrowerRepository.cs" />
+    <Compile Include="Repositories\PayeeRepository.cs" />
+    <Compile Include="Repositories\PaymentRepository.cs" />
+    <Compile Include="Repositories\PaymentVarietyRepository.cs" />
+    <Compile Include="Repositories\ScheduleRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Repositories\VarietyRepository.cs" />
+    <Compile Include="SessionFactory.cs" />
+    <Compile Include="SessionStorage\HttpSessionContainer.cs" />
+    <Compile Include="SessionStorage\ISessionStorageContainer.cs" />
+    <Compile Include="SessionStorage\SessionStorageFactory.cs" />
+    <Compile Include="SessionStorage\ThreadSessionStorageContainer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Alpine.Core\Alpine.Core.csproj">
+      <Project>{4a1a47fe-965b-4816-a795-15d17cad07b1}</Project>
+      <Name>Alpine.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Alpine.Infrastructure\Alpine.Infrastructure.csproj">
+      <Project>{e408c83b-d9b2-4a25-9484-1fecf3456f64}</Project>
+      <Name>Alpine.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

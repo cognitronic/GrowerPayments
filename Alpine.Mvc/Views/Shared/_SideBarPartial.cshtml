@@ -1,0 +1,137 @@
+﻿@using Alpine.Core
+@model Alpine.Controllers.ViewModels.SideBarView
+<script src="/Scripts/alpine/sidebar.js"></script>
+@if (1==1)
+{ 
+    <div class="sidebar">
+
+        <!-- Sidebar user -->
+        @*<div class="sidebar-user">
+            <a href="#" title=""><img src="images/live/face1.png" alt="" /><strong>Danny Schreiber</strong><span>@@administrator</span></a>
+        </div>*@
+        <!-- /sidebar user -->
+
+        <ul class="navigation"><!-- standard nav -->
+           @* <li id="nav-dashboard">
+                <a href="@Url.Action("Index", "Home")" title=""><span class="menu-dashboard"></span>Dashboard</a>
+            </li>*@
+            <li id="nav-growerprofile">
+                <a href="@Url.Action("Index", "GrowerProfile")" title="Grower Profile"><span class="menu-components"></span>Grower Profile</a>
+            </li>
+            @if(SecurityContextManager.Current.CurrentAccessLevel >= 60)
+            {
+            <li id="nav-masterschedule">
+                <a href="@Url.Action("Index", "MasterSchedule")" title="Master Schedule"><span class="menu-calendar"></span>Master Schedule</a>
+            </li>
+            }
+            <li id="nav-reports">
+                <a href="#" class="expand" title="Reports"><span class="menu-icons"></span>Reports<strong>2</strong></a>
+                <ul>
+                    <li id="subnav-growerpaymentreport"><a href="http://gpreports.alpinepacificnut.com/GrowerPaymentReport.aspx" title="">Grower Payment Report</a></li>
+                    <li id="subnav-averylabelreport"><a href="http://gpreports.alpinepacificnut.com/AveryLabelReport.aspx" title="">Payee Avery Label Report</a></li>
+                </ul>
+            </li>
+        </ul><!-- /standard nav -->
+
+        <div class="separator-doubled"></div>
+        
+        <!-- Action buttons -->
+        @*<div class="block buttons">
+            <a href="#" title="" class="action-button blue">Action button</a>
+            <a href="#" title="" class="action-button green" style="margin-top: 6px;">Action button</a>
+            <a href="#" title="" class="action-button greyish" style="margin-top: 6px;">Action button</a>
+            <a href="#" title="" class="action-button red" style="margin-top: 6px;">Action button</a>
+        </div>*@
+        <!-- /action buttons -->
+
+        @*<div class="separator-doubled"></div>*@
+        
+        <!-- Text stats -->
+        @*<ul class="text-stats block">
+            <li>1248<span>clicks</span></li>
+            <li>2548<span>visits</span></li>
+            <li>$603<span>balance</span></li>
+        </ul>*@
+        <!-- /text stats -->
+
+        @*<div class="separator-doubled"></div>*@
+        
+        <!-- Contact list -->
+        @*<ul class="user-list block">
+            <li>
+                <a href="#" title="">
+                    <img src="images/live/face.png" alt="" />
+                    <span class="contact-name">
+                        <strong>Eugene Kopyov <span>(5)</span></strong>
+                        <i>web &amp; ui designer</i>
+                    </span>
+                    <span class="status_away"></span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="#" title="">
+                    <img src="images/live/face2.png" alt="" />
+                    <span class="contact-name">
+                        <strong>Lucy Wilkinson <span>(12)</span></strong>
+                        <i>Team leader</i>
+                    </span>
+                    <span class="status_off"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="">
+                    <img src="images/live/face3.png" alt="" />
+                    <span class="contact-name">
+                        <strong>John Dow</strong>
+                        <i>PHP developer</i>
+                    </span>
+                    <span class="status_available"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="">
+                    <img src="images/live/face4.png" alt="" />
+                    <span class="contact-name">
+                        <strong>The Incredible</strong>
+                        <i>web &amp; ui designer</i>
+                    </span>
+                    <span class="status_available"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="">
+                    <img src="images/live/face5.png" alt="" />
+                    <span class="contact-name">
+                        <strong>The wazzup guy</strong>
+                        <i>web &amp; ui designer</i>
+                    </span>
+                    <span class="status_available"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="">
+                    <img src="images/live/face6.png" alt="" />
+                    <span class="contact-name">
+                        <strong>Viktor Fedorovich</strong>
+                        <i>web &amp; ui designer</i>
+                    </span>
+                    <span class="status_available"></span>
+                </a>
+            </li>
+        </ul>*@
+        <!-- /contact list -->
+
+        @*<div class="separator-doubled"></div>*@
+        
+        <!-- Date picker -->
+        @*<div class="block">
+            <div class="inlinepicker"></div>
+        </div>*@
+        <!-- /date picker -->
+
+    </div>
+    
+    <script type="text/javascript">
+        setCurrentMenuItem("@Model.SelectedMenuItem", "@Model.SelectedSubMenuItem");
+    </script>
+}

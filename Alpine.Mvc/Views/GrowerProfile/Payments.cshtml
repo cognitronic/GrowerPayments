@@ -1,0 +1,389 @@
+﻿@using Alpine.Core.Domain.Payment
+@model Alpine.Controllers.ViewModels.Growers.GrowersView
+<script src="~/Scripts/alpine/alpine.js"></script>
+@*<div class="page-header">
+    <h5>Payments</h5>
+    <div class="pull-right">
+        <a data-toggle="modal" href="#myModal"  id="btnAddPayment"   class="btn btn-normal btn-success" title="Add New Payment Template" >
+            <i class="font-plus"></i>Add Payment
+        </a>
+    </div>
+</div>*@
+<div class="row-fluid">
+    <div class="span12">
+        <div class="block well">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <h5>
+                        Grower Payments
+                    @Html.DropDownList("paymenttypeddl", Model.GrowerPaymentsDDL, " -- Add New Payment --")&nbsp;
+                        <button id="btnAddNewPayment" 
+                        type="button" 
+                        class="btn btn-normal btn-success" >
+                            <i class="font-add"></i>Add Payment
+                        </button>
+                        </h5>
+                    <div class="nav pull-right">
+                        <a class="dropdown-toggle just-icon" data-toggle="collapse" data-target="#payments"><i class="font-resize-vertical"></i></a>
+                    </div>
+                </div>
+            </div>
+<div class="row-fluid">
+    <div class="clearfix" />
+    @foreach( var payment in Model.GrowerPayments)
+    {
+        Model.SelectedPayment = payment;
+    <div class="span3">
+        <div class="block well">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <h5>Manage Payment</h5>
+                    <div class="nav pull-right">
+                        <a href="#" class="dropdown-toggle just-icon" data-toggle="dropdown"><i class="font-cog"></i></a>
+                        <ul class="dropdown-menu pull-right">
+                            <li>
+                               <button formtarget="_blank" id="btnViewPaymentReport" title="View Payment Report" class="btn btn-small btn-warning" onclick="location.href='http://alpinereports.localhost/reports.aspx?cid=@Model.SelectedPayment.GrowerID.ToString()&cy=@Model.SelectedPayment.CropYear&pt=@((int)Model.SelectedPayment.PaymentType)'">
+                                    <i class="icon-signal"></i> View Report
+                                </button>
+                            </li>
+                            @if(!Model.SelectedPayment.TransactionCompleted)
+                            {
+                                <li>
+                                    <button itemid="@payment.ID.ToString()" id="btnCompletePayment" title="Save Payment" class="completePayment btn btn-small btn-info">
+                                        <i class="icon-ok"></i> Save & Finalize
+                                    </button>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="body"><div class="control-group clearfix">
+                    <div>
+                        <label class="control-label">
+                            Payment Type:
+                            <span class="req">*</span>
+                        </label>
+                        <div class="controls">
+                                @Html.DropDownListFor(m => m.SelectedPayment.PaymentType, Model.PaymentTypes, " -- Select Payment Type --", new { @id = "paymenttypeddl_" + @payment.ID.ToString(), @style = "width: 150px;"})
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group clearfix">
+                    <div>
+                        <label class="control-label">
+                            Payment:
+                            <span class="req">*</span>
+                        </label>
+                        <div class="controls">
+                                @Html.TextBoxFor(m => m.SelectedPayment.Name, new {  @class = "span12", @id = "paymentname_" + @payment.ID.ToString()})
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group clearfix">
+                    <div>
+                        <label class="control-label">
+                            Amount:
+                            <span class="req">*</span>
+                        </label>
+                        <div class="controls">
+                                @Html.TextBoxFor(m => m.SelectedPayment.Amount, new {  @class = "span12", @id = "paymentamount_" + @payment.ID.ToString()})
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group clearfix">
+                    <div>
+                        <label class="control-label">
+                            Payment Date:
+                            <span class="req">*</span>
+                        </label>
+                        <div class="controls">
+                                @Html.TextBoxFor(m => m.SelectedPayment.PaymentDate, new {  @class = "required datepicker", @id = "paymentdate_" + @payment.ID.ToString(), @Value = Model.SelectedPayment.PaymentDate.ToShortDateString()})
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group clearfix">
+                    <div>
+                        <label class="control-label">
+                            Transaction Date:
+                        </label>
+                        <div class="controls">
+                                @if (Model.SelectedPayment.TransactionDate == null)
+                                {
+                                    @Html.TextBoxFor(m => m.SelectedPayment.TransactionDate, new {  @class = "required datepicker", @id = "transactiondate_" + @payment.ID.ToString()})
+                                }
+                                else
+                                {
+                                   @Html.TextBoxFor(m => m.SelectedPayment.TransactionDate, new {  @class = "required datepicker", @id = "transactiondate_" + @payment.ID.ToString(), @Value = ((DateTime)Model.SelectedPayment.TransactionDate).ToShortDateString()})
+                                }
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group clearfix">
+                    <div class="span12">
+                        <div class="controls">
+                            <strong>&nbsp;&nbsp;Note: </strong><br />
+                                @Html.TextAreaFor(m => m.SelectedPayment.Note, new{@height = "50px", @class = "span12", @id = "paymentnote_" + @payment.ID.ToString()})
+                        </div>
+                    </div>
+                </div>
+                @if(!Model.SelectedPayment.IsMiscPayment)
+                {
+                    <div class="control-group clearfix">
+                        <div>
+                    <strong>&nbsp;&nbsp;Varieties</strong><br />
+                    @*@Html.DropDownList("newvarietyddl_" + @payment.ID.ToString(), Model.VarietiesDDL, " -- Select Variety --", new { @class = "span6"})
+                    <button id="btnAddVariety" type="button" paymentid="@payment.ID.ToString()" class="addVariety btn btn-normal btn-success" >
+                        <i class="font-add"></i>Add Variety
+                    </button>*@
+                        </div>
+                    </div>
+                    foreach (var variety in payment.Varieties)
+                    { 
+                        <div class="control-group clearfix">
+                            <div class="span12">
+                                <label class="control-label">
+                                    @variety.Variety.Name:
+                                </label>
+                                <div class="controls">
+                                    @Html.TextBoxFor(m => m.SelectedPayment.Varieties.ElementAt(m.SelectedPayment.Varieties.IndexOf(variety)).Price, new {  @class = "span6 paymentvariety_" + @payment.ID.ToString(), @id = "variety_" + @variety.ID.ToString(), @varietyid = @variety.VarietyID.ToString(), @pvid = @variety.ID.ToString(), @nid = @variety.NutwareID.ToString()})
+                                    <button id="btnRemoveVariety" vid="@variety.ID.ToString()" type="button"  class="removeVariety btn btn-normal btn-danger" >
+                                            <i class="font-remove"></i>Remove
+                                        </button>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+                <div class="form-actions align-left">
+                    @if(!Model.SelectedPayment.TransactionCompleted)
+                    {
+                        <button id="btnSavePayment" 
+                        itemid="@payment.ID.ToString()" 
+                        type="button" 
+                        class="savePayment btn btn-normal btn-success" >
+                            <i class="font-plus"></i>Save 
+                        </button>
+                    }
+                    <button id="btnDeletePayment" 
+                    itemid="@payment.ID.ToString()" 
+                    type="button" 
+                    class="deletePayment btn btn-normal btn-danger" >
+                        <i class="font-remove"></i>Delete 
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+        Model.PaymentCount++;
+        if (Model.PaymentCount % 3 == 0)
+        { 
+            <div class="clearfix" />
+        }
+        Model.SelectedPayment = new Alpine.Core.Domain.Payment.Payment();
+    }
+</div>
+
+        </div>
+    </div>
+</div>
+
+<div style="margin-top: 75px;" />
+
+
+
+<script type="text/javascript">
+    //Add Payment Variety
+    $(".addVariety").click(function (e) {
+        e.preventDefault();
+        var variety = new PaymentVariety();
+        variety.PaymentID = $(this).attr("paymentid");
+        variety.VarietyID = $("#newvarietyddl_" + variety.PaymentID + " option:selected").val();
+        variety.Price = 0.0;
+
+        $.ajax({
+            url: baseUrl + 'api/Payments/AddVarietyToPaymentTemplate',
+            type: 'POST',
+            data: JSON.stringify(variety),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                loadGrowerPayments($("#ddlcropyears option:selected").val(), $("#ddlgrowers option:selected").val());
+                var notice = "<div class='notice closing'><div class='note note-success'><button type='button' class='close'>×</button><strong>Variety Successfully Added To Payment!!</strong></div></div>";
+                //alert(notice);
+                $("#mainwrapper").before(notice);
+                $('#mainwrapper').effect("highlight", { color: "#7fd658" }, 1000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+
+        //
+    });
+
+    $(".removeVariety").click(function (e) {
+        e.preventDefault();
+        var variety = new PaymentVariety();
+        variety.ID = $(this).attr("vid");
+        $.ajax({
+            url: baseUrl + 'api/Payments/DeletePaymentVarietyFromTemplate',
+            type: 'POST',
+            data: JSON.stringify(variety),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                loadGrowerPayments($("#ddlcropyears option:selected").val(), $("#ddlgrowers option:selected").val());
+                var notice = "<div class='notice closing'><div class='note note-success'><button type='button' class='close'>×</button><strong>Variety Successfully Removed From Payment!!</strong></div></div>";
+                //alert(notice);
+                $("#mainwrapper").before(notice);
+                $('#mainwrapper').effect("highlight", { color: "#7fd658" }, 1000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    });
+
+    //Save Payment
+    $(".savePayment").click(function (e) {
+        e.preventDefault();
+        var payment = new Payment();
+        payment.Name = $("#paymentname_" + $(this).attr("itemid")).val();
+        payment.Note = $("textarea#paymentnote_" + $(this).attr("itemid")).val();
+        payment.Amount = $("#paymentamount_" + $(this).attr("itemid")).val();
+        payment.PaymentType = $("#paymenttypeddl_" + $(this).attr("itemid") + " option:selected").val();
+        payment.PaymentDate = $("#paymentdate_" + $(this).attr("itemid")).val();
+        payment.ID = $(this).attr("itemid");
+
+        var varieties = [];
+        $('.paymentvariety_' + payment.ID.toString()).each(function () {
+            var variety = new PaymentVariety();
+            variety.Price = $(this).val();
+            variety.VarietyID = $(this).attr("varietyid");
+            variety.ID = $(this).attr("pvid");
+            variety.NutwareID = $(this).attr("nid");
+            variety.PaymentID = payment.ID;
+            varieties.push(variety);
+        });
+        $.ajax({
+            url: baseUrl + 'api/Payments/UpdatePayment',
+            type: 'POST',
+            data: JSON.stringify({ Payment: payment, Varieties: varieties }),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                //window.location = data.split(':')[2];
+                var notice = "<div class='notice closing'><div class='note note-success'><button type='button' class='close'>×</button><strong>Payment Successfully Updated!!</strong></div></div>";
+                //alert(notice);
+                $("#mainwrapper").before(notice);
+                $('#mainwrapper').effect("highlight", { color: "#7fd658" }, 1000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    });
+
+    $(".deletePayment").click(function (e) {
+        e.preventDefault();
+        var payment = new Payment();
+        payment.ID = $(this).attr("itemid");
+
+        $.ajax({
+            url: baseUrl + 'api/Payments/DeletePayment',
+            type: 'POST',
+            data: JSON.stringify(payment),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                loadGrowerPayments($("#ddlcropyears option:selected").val(), $("#ddlgrowers option:selected").val());
+                var notice = "<div class='notice closing'><div class='note note-success'><button type='button' class='close'>×</button><strong>Payment Successfully Deleted!!</strong></div></div>";
+                //alert(notice);
+                $("#mainwrapper").before(notice);
+                $('#mainwrapper').effect("highlight", { color: "#7fd658" }, 1000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    });
+
+    $("#btnSaveNewPayment").click(function (e) {
+        e.preventDefault();
+        var payment = new Payment();
+        payment.Name = $("#modalname").val();
+        payment.Description = $("#modaldescription").val();
+        payment.PaymentDate = $("#modalpaymentdate").val();
+        payment.CropYear = $("#ddlcropyears option:selected").val();
+        payment.GrowerID = $("#ddlgrowers option:selected").val();
+        payment.TemplateID = $("#paymenttypeddl option:selected").val();
+        payment.PaymentType = $("#paymenttypeddl option:selected").val();
+        $.ajax({
+            url: baseUrl + 'api/Payments/CreateGrowerPayment',
+            type: 'POST',
+            data: JSON.stringify(payment),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                loadGrowerPayments($("#ddlcropyears option:selected").val(), $("#ddlgrowers option:selected").val());
+                var notice = "<div class='notice closing'><div class='note note-success'><button type='button' class='close'>×</button><strong>Payment Successfully Created!!</strong></div></div>";
+                //alert(notice);
+                $("#mainwrapper").before(notice);
+                $('#mainwrapper').effect("highlight", { color: "#7fd658" }, 1000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    });
+
+    //Save Payment
+    $(".completePayment").click(function (e) {
+        alert('hi');
+        e.preventDefault();
+        var payment = new Payment();
+        payment.Name = $("#paymentname_" + $(this).attr("itemid")).val();
+        payment.Note = $("textarea#paymentnote_" + $(this).attr("itemid")).val();
+        payment.Amount = $("#paymentamount_" + $(this).attr("itemid")).val();
+        payment.PaymentType = $("#paymenttypeddl_" + $(this).attr("itemid") + " option:selected").val();
+        payment.PaymentDate = $("#paymentdate_" + $(this).attr("itemid")).val();
+        payment.TransactionDate = $("#transactiondate_" + $(this).attr("itemid")).val();
+        payment.TransactionCompleted = true;
+        payment.ID = $(this).attr("itemid");
+
+        var varieties = [];
+        $('.paymentvariety_' + payment.ID.toString()).each(function () {
+            var variety = new PaymentVariety();
+            variety.Price = $(this).val();
+            variety.VarietyID = $(this).attr("varietyid");
+            variety.ID = $(this).attr("pvid");
+            variety.NutwareID = $(this).attr("nid");
+            variety.PaymentID = payment.ID;
+            varieties.push(variety);
+        });
+        $.ajax({
+            url: baseUrl + 'api/Payments/UpdatePayment',
+            type: 'POST',
+            data: JSON.stringify({ Payment: payment, Varieties: varieties }),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                //window.location = data.split(':')[2];
+                var notice = "<div class='notice closing'><div class='note note-success'><button type='button' class='close'>×</button><strong>Payment Successfully Updated!!</strong></div></div>";
+                //alert(notice);
+                $("#mainwrapper").before(notice);
+                $('#mainwrapper').effect("highlight", { color: "#7fd658" }, 1000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    });
+
+    $("#btnAddNewPayment").click(function (e) {
+        e.preventDefault();  //prevent default form submit behaviour
+        addNewGrowerPayment($("#ddlcropyears option:selected").val(), $("#ddlgrowers option:selected").val(), $("#paymenttypeddl option:selected").val());
+    });
+</script>

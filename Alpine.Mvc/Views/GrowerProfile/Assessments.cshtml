@@ -1,0 +1,115 @@
+﻿@using Alpine.Core
+@model Alpine.Controllers.ViewModels.Growers.GrowersView
+<script src="/Scripts/alpine/alpine.js"></script>
+<div class="control-group clearfix">
+    <div class="span12">
+        <div class="controls">
+            <strong>&nbsp;&nbsp;Assessments: </strong><br />
+                @Html.DropDownList("addassessmentddl", Model.AssessmentsDDL, " -- Select Assessment --")
+                <button id="btnAddAssessment" type="button" class="btn btn-normal btn-success" >
+                    <i class="font-add"></i>Add Assessment
+                </button>
+        </div>
+    </div>
+</div>
+<table id="tblAssessments" class="table table-striped table-bordered table-block align-center">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                $/Lb.
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+    @if(@Model.Assessments != null && @Model.GrowerAssessments.Count() > 0)
+    {
+        foreach(var item in @Model.GrowerAssessments)
+        {   
+            <tr itemid="@item.ID" class="control-group">
+                <td style="width: 150px;" class="controls">
+                    <span id="assessmentName_@item.ID" name="assessmentName_@item.ID" type="area" class="convert-to-input span6">
+                        @item.Assessment.Name
+                    </span>
+                </td>
+                <td style="width: 50px;" class="controls">
+                    <span type="input" id="assessmentPricePerInShellPound_@item.ID" name="assessmentPricePerInShellPound_@item.ID" class="convert-to-input">
+                        @item.Assessment.PricePerInShellPound.ToString()
+                    </span>
+                </td>
+                <td style="width: 75px;">
+                    <button id="lbDeleteAssessment_@item.ID" itemid="@item.ID" title="Delete Assessment" class="deleteassessment btn btn-small btn-danger btn-block confirm">
+                        <i class="icon-remove"></i> Delete
+                    </button>
+                </td>
+            </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="6">
+                    <span>
+                        <h6>No Records Found</h6>
+                    </span>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    $("#btnAddAssessment").click(function (e) {
+        e.preventDefault();
+
+        var ga = new GrowerAssessment();
+        ga.AssessmentID = $("#addassessmentddl option:selected").val();
+        ga.GrowerID = $("#ddlgrowers option:selected").val();
+        ga.CropYear = $("#ddlcropyears option:selected").val();
+
+        $.ajax({
+            url: baseUrl + 'api/GrowerProfile/CreateGrowerAssessment',
+            type: 'POST',
+            data: JSON.stringify(ga),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                loadGrowerAssessments($("#ddlcropyears option:selected").val(), $("#ddlgrowers option:selected").val());
+                $("#assessments").effect("highlight", { color: "#7fd658" }, 3000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    });
+
+    $(".deleteassessment").click(function (e) {
+        e.preventDefault();
+
+        var ga = new GrowerAssessment();
+        ga.AssessmentID = $("#addassessmentddl option:selected").val();
+        ga.GrowerID = $("#ddlgrowers option:selected").val();
+        ga.CropYear = $("#ddlcropyears option:selected").val();
+        ga.ID = $(this).attr("itemid");
+
+        $.ajax({
+            url: baseUrl + 'api/GrowerProfile/DeleteGrowerAssessment',
+            type: 'POST',
+            data: JSON.stringify(ga),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                loadGrowerAssessments($("#ddlcropyears option:selected").val(), $("#ddlgrowers option:selected").val());
+                $("#assessments").effect("highlight", { color: "#7fd658" }, 3000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    });
+</script>

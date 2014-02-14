@@ -1,0 +1,331 @@
+﻿@using Alpine.Core
+@model Alpine.Controllers.ViewModels.Growers.GrowersView
+<script src="/Scripts/alpine/alpine.js"></script>
+<table id="tblPayees" class="table table-striped table-bordered table-block align-center">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Check made to
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Fax
+            </th>
+            <th>
+                Work Phone
+            </th>
+            <th>
+                Split
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @if(@Model.Payees != null && @Model.Payees.Count() > 0)
+    {
+        foreach(var item in @Model.Payees)
+        {   
+            <tr itemid="@item.ID" class="control-group">
+                <td style="width: 150px;" class="controls">
+                    <span id="payeeName_@item.ID" name="payeeName_@item.ID" type="area" class="convert-to-input span6">
+                        @item.FirstName @item.LastName
+                    </span>
+                </td>
+                <td style="width: 100px;" class="controls">
+                    <span type="input" id="payeeCheck_@item.ID" name="payeeCheck_@item.ID" class="convert-to-input">
+                        @item.CheckMadeTo
+                    </span>
+                </td>
+                <td style="width: 100px;" class="controls">
+                    <span type="input" id="payeeAddress_@item.ID" name="payeeAddress_@item.ID" class="convert-to-input">
+                        @item.Address <br /> @item.City, @item.State @item.Zip
+                    </span>
+                </td>
+                <td style="width: 100px;" class="controls">
+                    <span type="input" id="payeeEmail_@item.ID" name="payeeEmail_@item.ID" class="convert-to-input">
+                        @item.Email
+                    </span>
+                </td>
+                <td style="width: 75px;" class="controls">
+                    <span type="input" id="payeeFax_@item.ID" name="payeeFax_@item.ID" class="convert-to-input">
+                        @item.Fax
+                    </span>
+                </td>
+                <td style="width: 75px;" class="controls">
+                    <span type="input" id="payeeWorkPhone_@item.ID" name="payeeWorkPhone_@item.ID" class="convert-to-input">
+                        @item.WorkPhone
+                    </span>
+                </td>
+                <td style="width: 35px;" class="controls">
+                    <input type="text" id="payeePercentSplit_@item.ID" name="payeePercentSplit_@item.ID" class="span12" value="@item.SplitPercent"/>
+                </td>
+                <td style="width: 75px;">
+                    <button id="lbSavePayee_@item.ID" itemid="@item.ID" title="Save Payee" class="savepayee btn btn-small btn-success btn-block">
+                        <i class="icon-remove"></i> Save
+                    </button>
+                    <button id="lbDeletePayee_@item.ID" itemid="@item.ID" title="Delete Payee" class="deletepayee btn btn-small btn-danger btn-block confirm">
+                        <i class="icon-remove"></i> Delete
+                    </button>
+                </td>
+            </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="11">
+                    <span>
+                        <h6>No Records Found</h6>
+                    </span>
+                </td>
+            </tr>
+            Model.SelectedPayee = new Alpine.Core.Domain.Grower.Payee();
+        }
+    </tbody>
+</table>
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h5 id="myModalLabel">Create New Payee</h5>
+                </div>
+                <div class="modal-body">
+                <form class="form-horizontal">
+                    <div id="divSecurityContainer" style="height: 400px; overflow: scroll;" class="row-fluid">
+                        @using (Html.BeginForm(null, null, FormMethod.Post, new { @id = "newPayeeForm" }))
+        {
+                        <div class="control-group clearfix">
+                            <div class="span12">
+                                <label class="control-label">
+                                    First Name:
+                                    <span class="req">*</span>
+                                </label>
+                                <div class="controls">
+                                        @Html.TextBoxFor(m => m.SelectedPayee.FirstName, new { @class = "required span12", @id = "modalfirstname"})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group clearfix">
+                            <div class="span12">
+                                <label class="control-label">
+                                    Last Name:
+                                    <span class="req">*</span>
+                                </label>
+                                <div class="controls">
+                                        @Html.TextBoxFor(m => m.SelectedPayee.LastName, new { @class = "required span12", @id = "modallastname"})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group clearfix">
+                            <div class="span12">
+                                <label class="control-label">
+                                    Check Made To:
+                                    <span class="req">*</span>
+                                </label>
+                                <div class="controls">
+                                        @Html.TextBoxFor(m => m.SelectedPayee.CheckMadeTo, new { @class = "required span12", @id = "modalcheckmadeto"})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group clearfix">
+                            <div class="span12">
+                                <label class="control-label">
+                                    Address:
+                                    <span class="req">*</span>
+                                </label>
+                                <div class="controls">
+                                    @Html.TextBoxFor(m => m.SelectedPayee.Address, new { @class = "required span12", @id = "modaladdress"})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group clearfix">
+                            <div class="span12">
+                                <label class="control-label">
+                                    City:
+                                    <span class="req">*</span>
+                                </label>
+                                <div class="controls">
+                                    @Html.TextBoxFor(m => m.SelectedPayee.City, new { @class = "required span12", @id = "modalcity"})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group clearfix">
+                            <div class="span12">
+                                <label class="control-label">
+                                    State:
+                                    <span class="req">*</span>
+                                </label>
+                                <div class="controls">
+                                    @Html.TextBoxFor(m => m.SelectedPayee.State, new { @class = "required span12", @id = "modalstate"})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group clearfix">
+                            <div class="span12">
+                                <label class="control-label">
+                                    Zip:
+                                    <span class="req">*</span>
+                                </label>
+                                <div class="controls">
+                                    @Html.TextBoxFor(m => m.SelectedPayee.Zip, new { @class = "required span12", @id = "modalzip"})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group clearfix">
+                            <div class="span12">
+                                <label class="control-label">
+                                    Email:
+                                    <span class="req">*</span>
+                                </label>
+                                <div class="controls">
+                                    @Html.TextBoxFor(m => m.SelectedPayee.Email, new { @class = "required span12", @id = "modalemail"})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group clearfix">
+                            <div class="span12">
+                                <label class="control-label">
+                                    Fax:
+                                    <span class="req">*</span>
+                                </label>
+                                <div class="controls">
+                                    @Html.TextBoxFor(m => m.SelectedPayee.Fax, new { @class = "required span12", @id = "modalfax"})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group clearfix">
+                            <div class="span12">
+                                <label class="control-label">
+                                    Work Phone:
+                                    <span class="req">*</span>
+                                </label>
+                                <div class="controls">
+                                    @Html.TextBoxFor(m => m.SelectedPayee.WorkPhone, new { @class = "required span12", @id = "modalworkphone"})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group clearfix">
+                            <div class="span12">
+                                <label class="control-label">
+                                    Cell Phone:
+                                    <span class="req">*</span>
+                                </label>
+                                <div class="controls">
+                                    @Html.TextBoxFor(m => m.SelectedPayee.CellPhone, new { @class = "required span12", @id = "modalcellphone"})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group clearfix">
+                            <div class="span12">
+                                <label class="control-label">
+                                    Percent Split:
+                                    <span class="req">*</span>
+                                </label>
+                                <div class="controls">
+                                    @Html.TextBoxFor(m => m.SelectedPayee.SplitPercent, new { @class = "required span12", @id = "modalpercentsplit"})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-actions modal-footer">
+                            <a id="btnSaveNewPayee" title="Save Payee" class="btn btn-small btn-info" data-toggle="modal" href="#myModal">
+                                <i class="icon-plus"></i> Save Payee
+                            </a>
+                            <a href='#' title="Cancel" data-dismiss="modal" class="btn btn-small btn-danger">
+                                <i class="icon-remove"></i> Cancel
+                            </a>               
+                        </div>
+        }
+                    </div>
+                    </form>
+                </div>
+            </div>
+
+<script type="text/javascript">
+    
+
+    $(".deletepayee").click(function (e) {
+        e.preventDefault();
+
+        var payee = new Payee();
+        payee.ID = $(this).attr("itemid");
+
+        $.ajax({
+            url: baseUrl + 'api/GrowerProfile/DeletePayee',
+            type: 'POST',
+            data: JSON.stringify(payee),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                loadGrowerPayees($("#ddlcropyears option:selected").val(), $("#ddlgrowers option:selected").val());
+                $("#profileContainer").effect("highlight", { color: "#7fd658" }, 3000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+       
+    });
+
+    $(".savepayee").click(function (e) {
+        e.preventDefault();
+
+        var payee = new Payee();
+        payee.ID = $(this).attr("itemid");
+        payee.SplitPercent = $("#payeePercentSplit_" + payee.ID).val();
+
+        $.ajax({
+            url: baseUrl + 'api/GrowerProfile/UpdatePayee',
+            type: 'POST',
+            data: JSON.stringify(payee),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                loadGrowerPayees($("#ddlcropyears option:selected").val(), $("#ddlgrowers option:selected").val());
+                $("#profileContainer").effect("highlight", { color: "#7fd658" }, 3000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    });
+
+    $("#btnSaveNewPayee").click(function (e) {
+        e.preventDefault();
+        var payee = new Payee();
+        payee.FirstName = $("#modalfirstname").val();
+        payee.LastName = $("#modallastname").val();
+        payee.CheckMadeTo = $("#modalcheckmadeto").val();
+        payee.Address = $("#modaladdress").val();
+        payee.City = $("#modalcity").val();
+        payee.State = $("#modalstate").val();
+        payee.Zip = $("#modalzip").val();
+        payee.Email = $("#modalemail").val();
+        payee.Fax = $("#modalfax").val();
+        payee.WorkPhone = $("#modalworkphone").val();
+        payee.CellPhone = $("#modalcellphone").val();
+        payee.SplitPercent = $("#modalpercentsplit").val();
+        payee.GrowerID = $("#ddlgrowers option:selected").val();
+
+        $.ajax({
+            url: baseUrl + 'api/GrowerProfile/CreatePayee',
+            type: 'POST',
+            data: JSON.stringify(payee),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                loadGrowerPayees($("#ddlcropyears option:selected").val(), $("#ddlgrowers option:selected").val());
+                $("#payees").effect("highlight", { color: "#7fd658" }, 3000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    });
+</script>

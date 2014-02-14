@@ -1,0 +1,26 @@
+﻿@model Alpine.Controllers.ViewModels.UserAccount.UserAccountView
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<script src="/Scripts/alpine/alpine.js"></script>
+<script src="/Scripts/alpine/domainObjects.js"></script>
+@section featured {
+    <section class="featured">
+        <div class="page-header"><!-- Page header -->
+            <h5>
+                <i class="font-calendar"></i>
+                Master Schedule
+            </h5>
+            <div class="pull-right">
+                <h5>Select Crop Year:&nbsp; </h5>
+            @Html.DropDownList("ddlcropyears", @Model.CropYears, new { @style = "width: 75px;"})
+            </div>
+        </div><!-- /page header -->
+    </section>
+}
+<h2>Reports</h2>
+    <div id="headerContainer" >
+            @Html.Action("Header", "Reports")
+        </div>

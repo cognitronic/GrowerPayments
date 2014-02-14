@@ -1,0 +1,110 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpine.Core", "Alpine.Core\Alpine.Core.csproj", "{4A1A47FE-965B-4816-A795-15D17CAD07B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpine.Services", "Alpine.Services\Alpine.Services.csproj", "{B290EF05-C527-4259-8488-D9CE063E1A31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpine.Repository.NHibernate", "Alpine.Repository.NHibernate\Alpine.Repository.NHibernate.csproj", "{6E9B1BEF-B2A6-419A-B396-31C346BA015A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpine.Mvc", "Alpine.Mvc\Alpine.Mvc.csproj", "{2A47A267-D0EB-4FC2-B3CE-4EEB0CD072C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpine.Infrastructure", "Alpine.Infrastructure\Alpine.Infrastructure.csproj", "{E408C83B-D9B2-4A25-9484-1FECF3456F64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpine.Controllers", "Alpine.Controllers\Alpine.Controllers.csproj", "{E2AAAD8B-12E5-4D90-8C35-6BDB308EF60C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpine.Web", "Alpine.Web\Alpine.Web.csproj", "{FE12D56D-3B86-4263-A405-47A18540417A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpine.Repository.NHibernate.Tests", "Alpine.Repository.NHibernate.Tests\Alpine.Repository.NHibernate.Tests.csproj", "{00F1EFD0-CDE5-43E6-B058-716BC2D1A37D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpine.Services.Test", "Alpine.Services.Test\Alpine.Services.Test.csproj", "{A75530D2-5D20-46A3-8197-C5B4156496A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpine.Reports", "Alpine.Reports\Alpine.Reports.csproj", "{0248A7F0-60EB-40B0-A11A-2142C399A535}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 11
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://www.swoontree.com:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Alpine.Core\\Alpine.Core.csproj
+		SccProjectName1 = Alpine.Core
+		SccLocalPath1 = Alpine.Core
+		SccProjectUniqueName2 = Alpine.Services\\Alpine.Services.csproj
+		SccProjectName2 = Alpine.Services
+		SccLocalPath2 = Alpine.Services
+		SccProjectUniqueName3 = Alpine.Repository.NHibernate\\Alpine.Repository.NHibernate.csproj
+		SccProjectName3 = Alpine.Repository.NHibernate
+		SccLocalPath3 = Alpine.Repository.NHibernate
+		SccProjectUniqueName4 = Alpine.Mvc\\Alpine.Mvc.csproj
+		SccProjectName4 = Alpine.Mvc
+		SccLocalPath4 = Alpine.Mvc
+		SccProjectUniqueName5 = Alpine.Infrastructure\\Alpine.Infrastructure.csproj
+		SccProjectName5 = Alpine.Infrastructure
+		SccLocalPath5 = Alpine.Infrastructure
+		SccProjectUniqueName6 = Alpine.Controllers\\Alpine.Controllers.csproj
+		SccProjectName6 = Alpine.Controllers
+		SccLocalPath6 = Alpine.Controllers
+		SccProjectUniqueName7 = Alpine.Web\\Alpine.Web.csproj
+		SccProjectName7 = Alpine.Web
+		SccLocalPath7 = Alpine.Web
+		SccProjectUniqueName8 = Alpine.Repository.NHibernate.Tests\\Alpine.Repository.NHibernate.Tests.csproj
+		SccProjectName8 = Alpine.Repository.NHibernate.Tests
+		SccLocalPath8 = Alpine.Repository.NHibernate.Tests
+		SccProjectUniqueName9 = Alpine.Services.Test\\Alpine.Services.Test.csproj
+		SccProjectName9 = Alpine.Services.Test
+		SccLocalPath9 = Alpine.Services.Test
+		SccProjectUniqueName10 = Alpine.Reports\\Alpine.Reports.csproj
+		SccProjectName10 = Alpine.Reports
+		SccLocalPath10 = Alpine.Reports
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A1A47FE-965B-4816-A795-15D17CAD07B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A1A47FE-965B-4816-A795-15D17CAD07B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A1A47FE-965B-4816-A795-15D17CAD07B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A1A47FE-965B-4816-A795-15D17CAD07B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B290EF05-C527-4259-8488-D9CE063E1A31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B290EF05-C527-4259-8488-D9CE063E1A31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B290EF05-C527-4259-8488-D9CE063E1A31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B290EF05-C527-4259-8488-D9CE063E1A31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E9B1BEF-B2A6-419A-B396-31C346BA015A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E9B1BEF-B2A6-419A-B396-31C346BA015A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E9B1BEF-B2A6-419A-B396-31C346BA015A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E9B1BEF-B2A6-419A-B396-31C346BA015A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A47A267-D0EB-4FC2-B3CE-4EEB0CD072C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A47A267-D0EB-4FC2-B3CE-4EEB0CD072C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A47A267-D0EB-4FC2-B3CE-4EEB0CD072C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A47A267-D0EB-4FC2-B3CE-4EEB0CD072C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E408C83B-D9B2-4A25-9484-1FECF3456F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E408C83B-D9B2-4A25-9484-1FECF3456F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E408C83B-D9B2-4A25-9484-1FECF3456F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E408C83B-D9B2-4A25-9484-1FECF3456F64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2AAAD8B-12E5-4D90-8C35-6BDB308EF60C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2AAAD8B-12E5-4D90-8C35-6BDB308EF60C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2AAAD8B-12E5-4D90-8C35-6BDB308EF60C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2AAAD8B-12E5-4D90-8C35-6BDB308EF60C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE12D56D-3B86-4263-A405-47A18540417A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE12D56D-3B86-4263-A405-47A18540417A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE12D56D-3B86-4263-A405-47A18540417A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE12D56D-3B86-4263-A405-47A18540417A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00F1EFD0-CDE5-43E6-B058-716BC2D1A37D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00F1EFD0-CDE5-43E6-B058-716BC2D1A37D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00F1EFD0-CDE5-43E6-B058-716BC2D1A37D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00F1EFD0-CDE5-43E6-B058-716BC2D1A37D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A75530D2-5D20-46A3-8197-C5B4156496A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A75530D2-5D20-46A3-8197-C5B4156496A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A75530D2-5D20-46A3-8197-C5B4156496A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A75530D2-5D20-46A3-8197-C5B4156496A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0248A7F0-60EB-40B0-A11A-2142C399A535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0248A7F0-60EB-40B0-A11A-2142C399A535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0248A7F0-60EB-40B0-A11A-2142C399A535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0248A7F0-60EB-40B0-A11A-2142C399A535}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

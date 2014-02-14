@@ -1,0 +1,22 @@
+D:\Projects\Alpine\Alpine.Core\bin\Debug\Alpine.Core.dll
+D:\Projects\Alpine\Alpine.Core\bin\Debug\Alpine.Core.pdb
+D:\Projects\Alpine\Alpine.Core\obj\Debug\Alpine.Core.csprojResolveAssemblyReference.cache
+D:\Projects\Alpine\Alpine.Core\obj\Debug\Alpine.Core.dll
+D:\Projects\Alpine\Alpine.Core\obj\Debug\Alpine.Core.pdb
+D:\Projects\Alpine\Alpine.Core\bin\Debug\log4net.dll
+D:\Projects\Alpine\Alpine.Core\bin\Debug\log4net.xml
+D:\Projects\Alpine\Alpine.Core\bin\Debug\Alpine.Infrastructure.dll
+D:\Projects\Alpine\Alpine.Core\bin\Debug\Alpine.Infrastructure.pdb
+D:\Projects\Alpine\Alpine.Core\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\Alpine\Alpine.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Alpine Pacific\Alpine.Core\bin\Debug\Alpine.Core.dll
+C:\Projects\Alpine Pacific\Alpine.Core\bin\Debug\Alpine.Core.pdb
+C:\Projects\Alpine Pacific\Alpine.Core\bin\Debug\Alpine.Infrastructure.dll
+C:\Projects\Alpine Pacific\Alpine.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\Alpine Pacific\Alpine.Core\bin\Debug\log4net.dll
+C:\Projects\Alpine Pacific\Alpine.Core\bin\Debug\Alpine.Infrastructure.pdb
+C:\Projects\Alpine Pacific\Alpine.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Alpine Pacific\Alpine.Core\bin\Debug\log4net.xml
+C:\Projects\Alpine Pacific\Alpine.Core\obj\Debug\Alpine.Core.csprojResolveAssemblyReference.cache
+C:\Projects\Alpine Pacific\Alpine.Core\obj\Debug\Alpine.Core.dll
+C:\Projects\Alpine Pacific\Alpine.Core\obj\Debug\Alpine.Core.pdb

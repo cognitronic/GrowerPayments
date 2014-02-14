@@ -1,0 +1,102 @@
+D:\Projects\Alpine\Alpine.Controllers\obj\Debug\Alpine.Controllers.csprojResolveAssemblyReference.cache
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Alpine.Controllers.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Alpine.Controllers.pdb
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Alpine.Core.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Alpine.Infrastructure.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Alpine.Web.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\AutoMapper.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\StructureMap.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\System.Net.Http.Formatting.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\System.Web.Http.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\System.Web.Http.WebHost.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\WebActivator.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\log4net.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Alpine.Core.pdb
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Alpine.Infrastructure.pdb
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Alpine.Web.pdb
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\AutoMapper.xml
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\StructureMap.pdb
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\StructureMap.xml
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\System.Net.Http.Formatting.xml
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\System.Web.Http.xml
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\System.Web.Http.WebHost.xml
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\log4net.xml
+D:\Projects\Alpine\Alpine.Controllers\obj\Debug\Alpine.Controllers.dll
+D:\Projects\Alpine\Alpine.Controllers\obj\Debug\Alpine.Controllers.pdb
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Alpine.Services.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Couchbase.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Enyim.Caching.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Alpine.Services.pdb
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Couchbase.pdb
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Couchbase.xml
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Enyim.Caching.pdb
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Enyim.Caching.xml
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\EO.Pdf.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\EO.Web.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\WebApiContrib.IoC.StructureMap.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Alpine.Repository.NHibernate.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\FluentNHibernate.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\NHibernate.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Iesi.Collections.dll
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Alpine.Repository.NHibernate.pdb
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\FluentNHibernate.xml
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\NHibernate.xml
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Iesi.Collections.xml
+D:\Projects\Alpine\Alpine.Controllers\bin\Debug\Kendo.Mvc.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Alpine.Controllers.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Alpine.Controllers.pdb
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Alpine.Core.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Alpine.Infrastructure.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Alpine.Repository.NHibernate.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Alpine.Services.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Alpine.Web.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\AutoMapper.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\EO.Pdf.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\EO.Web.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Kendo.Mvc.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\StructureMap.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\System.Net.Http.Formatting.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\System.Web.Http.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\System.Web.Http.WebHost.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\WebActivator.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\WebApiContrib.IoC.StructureMap.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\log4net.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\FluentNHibernate.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\NHibernate.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Couchbase.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Enyim.Caching.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Iesi.Collections.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Alpine.Core.pdb
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Alpine.Infrastructure.pdb
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Alpine.Repository.NHibernate.pdb
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Alpine.Services.pdb
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Alpine.Web.pdb
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\AutoMapper.xml
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\StructureMap.pdb
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\StructureMap.xml
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\System.Net.Http.Formatting.xml
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\System.Web.Http.xml
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\System.Web.Http.WebHost.xml
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\log4net.xml
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\FluentNHibernate.xml
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\NHibernate.xml
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Couchbase.pdb
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Couchbase.xml
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Enyim.Caching.pdb
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Enyim.Caching.xml
+C:\Projects\Alpine Pacific\Alpine.Controllers\bin\Debug\Iesi.Collections.xml
+C:\Projects\Alpine Pacific\Alpine.Controllers\obj\Debug\Alpine.Controllers.csprojResolveAssemblyReference.cache
+C:\Projects\Alpine Pacific\Alpine.Controllers\obj\Debug\Alpine.Controllers.dll
+C:\Projects\Alpine Pacific\Alpine.Controllers\obj\Debug\Alpine.Controllers.pdb

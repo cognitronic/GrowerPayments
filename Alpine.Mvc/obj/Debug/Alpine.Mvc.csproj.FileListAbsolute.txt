@@ -1,0 +1,182 @@
+D:\Projects\Alpine\Alpine.Mvc\bin\Alpine.Mvc.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\Alpine.Mvc.pdb
+D:\Projects\Alpine\Alpine.Mvc\bin\Alpine.Core.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\Alpine.Services.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\Antlr3.Runtime.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\DotNetOpenAuth.AspNet.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\DotNetOpenAuth.Core.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\DotNetOpenAuth.OAuth.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\DotNetOpenAuth.OpenId.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\EntityFramework.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\Newtonsoft.Json.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\System.Net.Http.Formatting.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\System.Web.Helpers.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\System.Web.Http.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\System.Web.Http.WebHost.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\System.Web.Mvc.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\System.Web.Optimization.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\System.Web.Razor.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\System.Web.WebPages.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\System.Web.WebPages.Razor.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\WebGrease.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\WebMatrix.Data.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\WebMatrix.WebData.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\log4net.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\Alpine.Core.pdb
+D:\Projects\Alpine\Alpine.Mvc\bin\Alpine.Services.pdb
+D:\Projects\Alpine\Alpine.Mvc\bin\EntityFramework.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\Newtonsoft.Json.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\System.Net.Http.Formatting.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\System.Web.Helpers.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\System.Web.Http.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\System.Web.Http.WebHost.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\System.Web.Mvc.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\System.Web.Razor.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\System.Web.WebPages.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\System.Web.WebPages.Razor.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\WebMatrix.Data.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\WebMatrix.WebData.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\DotNetOpenAuth.AspNet.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\DotNetOpenAuth.Core.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\DotNetOpenAuth.OAuth.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\DotNetOpenAuth.OpenId.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\log4net.xml
+D:\Projects\Alpine\Alpine.Mvc\obj\Debug\Alpine.Mvc.csprojResolveAssemblyReference.cache
+D:\Projects\Alpine\Alpine.Mvc\obj\Debug\Alpine.Mvc.dll
+D:\Projects\Alpine\Alpine.Mvc\obj\Debug\Alpine.Mvc.pdb
+D:\Projects\Alpine\Alpine.Mvc\bin\Alpine.Infrastructure.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\Alpine.Infrastructure.pdb
+D:\Projects\Alpine\Alpine.Mvc\bin\Alpine.Controllers.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\Alpine.Web.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\Couchbase.AspNet.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\Couchbase.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\Enyim.Caching.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\EO.Pdf.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\EO.Web.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\MemcachedProviders.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\Microsoft.Practices.ServiceLocation.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\StructureMap.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\WebActivator.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\Alpine.Controllers.pdb
+D:\Projects\Alpine\Alpine.Mvc\bin\Alpine.Web.pdb
+D:\Projects\Alpine\Alpine.Mvc\bin\Couchbase.pdb
+D:\Projects\Alpine\Alpine.Mvc\bin\Couchbase.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\Enyim.Caching.pdb
+D:\Projects\Alpine\Alpine.Mvc\bin\Enyim.Caching.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\MemcachedProviders.pdb
+D:\Projects\Alpine\Alpine.Mvc\bin\Microsoft.Practices.ServiceLocation.pdb
+D:\Projects\Alpine\Alpine.Mvc\bin\Microsoft.Practices.ServiceLocation.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\StructureMap.pdb
+D:\Projects\Alpine\Alpine.Mvc\bin\StructureMap.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\AutoMapper.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\AutoMapper.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\Alpine.Repository.NHibernate.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\FluentNHibernate.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\NHibernate.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\Iesi.Collections.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\Alpine.Repository.NHibernate.pdb
+D:\Projects\Alpine\Alpine.Mvc\bin\FluentNHibernate.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\NHibernate.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\Iesi.Collections.xml
+D:\Projects\Alpine\Alpine.Mvc\bin\WebApiContrib.IoC.StructureMap.dll
+D:\Projects\Alpine\Alpine.Mvc\bin\Kendo.Mvc.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Alpine.Mvc.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Alpine.Mvc.pdb
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Alpine.Controllers.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Alpine.Core.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Alpine.Infrastructure.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Alpine.Repository.NHibernate.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Alpine.Services.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Alpine.Web.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Antlr3.Runtime.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Couchbase.AspNet.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Couchbase.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\DotNetOpenAuth.AspNet.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\DotNetOpenAuth.Core.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\DotNetOpenAuth.OAuth.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\DotNetOpenAuth.OpenId.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\EntityFramework.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Enyim.Caching.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\EO.Pdf.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\EO.Web.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Kendo.Mvc.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\MemcachedProviders.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Microsoft.Web.Infrastructure.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Newtonsoft.Json.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\StructureMap.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\System.Net.Http.Formatting.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\System.Web.Helpers.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\System.Web.Http.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\System.Web.Http.WebHost.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\System.Web.Mvc.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\System.Web.Optimization.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\System.Web.Razor.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\System.Web.WebPages.Deployment.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\System.Web.WebPages.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\System.Web.WebPages.Razor.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\WebActivator.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\WebApiContrib.IoC.StructureMap.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\WebGrease.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\WebMatrix.Data.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\WebMatrix.WebData.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\AutoMapper.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\log4net.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\FluentNHibernate.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\NHibernate.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Iesi.Collections.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Alpine.Controllers.pdb
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Alpine.Core.pdb
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Alpine.Infrastructure.pdb
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Alpine.Repository.NHibernate.pdb
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Alpine.Services.pdb
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Alpine.Web.pdb
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Couchbase.pdb
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Couchbase.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Enyim.Caching.pdb
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Enyim.Caching.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\MemcachedProviders.pdb
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Newtonsoft.Json.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\StructureMap.pdb
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\StructureMap.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\EntityFramework.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\System.Net.Http.Formatting.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\System.Web.Helpers.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\System.Web.Http.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\System.Web.Http.WebHost.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\System.Web.Mvc.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\System.Web.Razor.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\System.Web.WebPages.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\System.Web.WebPages.Deployment.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\System.Web.WebPages.Razor.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\WebMatrix.Data.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\WebMatrix.WebData.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\DotNetOpenAuth.AspNet.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\DotNetOpenAuth.Core.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\DotNetOpenAuth.OAuth.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\DotNetOpenAuth.OpenId.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\AutoMapper.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\log4net.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\FluentNHibernate.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\NHibernate.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\bin\Iesi.Collections.xml
+C:\Projects\Alpine Pacific\Alpine.Mvc\obj\Debug\Alpine.Mvc.csprojResolveAssemblyReference.cache
+C:\Projects\Alpine Pacific\Alpine.Mvc\obj\Debug\Alpine.Mvc.dll
+C:\Projects\Alpine Pacific\Alpine.Mvc\obj\Debug\Alpine.Mvc.pdb

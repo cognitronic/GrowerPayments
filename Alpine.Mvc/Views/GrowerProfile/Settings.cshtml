@@ -1,0 +1,47 @@
+﻿@using Alpine.Core
+@model Alpine.Controllers.ViewModels.Growers.GrowersView
+<script src="/Scripts/alpine/alpine.js"></script>
+<div class="control-group clearfix">
+    <div class="span12">
+        <div class="controls">
+            <strong>&nbsp;&nbsp;Is Standard Schedule?: </strong>
+                @Html.CheckBoxFor(m => m.IsStandardSchedule, new { @id = "cbIsStandardSchedule"})
+        </div>
+    </div>
+</div>
+<div class="control-group clearfix">
+    <div class="span12">
+        <div class="controls">
+            <button id="btnSaveProfile" profileid="@Model.GrowerProfileID.ToString()" type="button" class="btn btn-normal btn-success" >
+                <i class="font-add"></i>Save Profile
+            </button>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $("#btnSaveProfile").click(function (e) {
+        e.preventDefault();
+
+        var gp = new GrowerProfile();
+        gp.ID = $("#btnSaveProfile").attr("profileid");
+        gp.GrowerID = $("#ddlgrowers option:selected").val();
+        gp.IsStandardSchedule = $("#cbIsStandardSchedule").is(":checked");
+
+        $.ajax({
+            url: baseUrl + 'api/GrowerProfile/SaveGrowerProfile',
+            type: 'POST',
+            data: JSON.stringify(gp),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                loadGrowerNotes($("#ddlcropyears option:selected").val(), $("#ddlgrowers option:selected").val());
+                $("#settings").effect("highlight", { color: "#7fd658" }, 3000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    });
+</script>

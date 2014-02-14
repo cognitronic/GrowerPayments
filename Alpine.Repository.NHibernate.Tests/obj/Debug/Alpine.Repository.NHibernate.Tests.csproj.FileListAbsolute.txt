@@ -1,0 +1,54 @@
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\Alpine.Repository.NHibernate.Tests.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\Alpine.Repository.NHibernate.Tests.pdb
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\Alpine.Core.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\Alpine.Infrastructure.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\Alpine.Repository.NHibernate.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\FluentNHibernate.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\Iesi.Collections.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\NHibernate.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\xunit.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\log4net.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\Alpine.Core.pdb
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\Alpine.Infrastructure.pdb
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\Alpine.Repository.NHibernate.pdb
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\FluentNHibernate.xml
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\Iesi.Collections.xml
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\NHibernate.xml
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\xunit.xml
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\log4net.xml
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\obj\Debug\Alpine.Repository.NHibernate.Tests.csprojResolveAssemblyReference.cache
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\obj\Debug\Alpine.Repository.NHibernate.Tests.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\obj\Debug\Alpine.Repository.NHibernate.Tests.pdb
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\Alpine.Repository.NHibernate.Tests.dll.config
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\Moq.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\Moq.pdb
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\Moq.xml
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\Alpine.Repository.NHibernate.Tests.dll.config
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\Alpine.Repository.NHibernate.Tests.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\Alpine.Repository.NHibernate.Tests.pdb
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\Alpine.Core.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\Alpine.Infrastructure.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\Alpine.Repository.NHibernate.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\FluentNHibernate.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\Iesi.Collections.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\Moq.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\NHibernate.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\xunit.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\log4net.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\Alpine.Core.pdb
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\Alpine.Infrastructure.pdb
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\Alpine.Repository.NHibernate.pdb
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\FluentNHibernate.xml
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\Iesi.Collections.xml
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\Moq.pdb
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\Moq.xml
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\NHibernate.xml
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\xunit.xml
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\bin\Debug\log4net.xml
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\obj\Debug\Alpine.Repository.NHibernate.Tests.csprojResolveAssemblyReference.cache
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\obj\Debug\Alpine.Repository.NHibernate.Tests.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\obj\Debug\Alpine.Repository.NHibernate.Tests.pdb

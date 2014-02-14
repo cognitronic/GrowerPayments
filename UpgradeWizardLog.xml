@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Core\Alpine.Core.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Core\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\Alpine Pacific\Alpine.Core\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\Alpine Pacific\Alpine.Core\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\Alpine Pacific\Alpine.Core\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\Alpine Pacific\Alpine.Core\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\Alpine Pacific\Alpine.Core\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Projects\Alpine Pacific\Alpine.Core\packages.config" />
+  <event action="Analyze" type="Success" name="Alpine.Core" path="C:\Projects\Alpine Pacific\Alpine.Core\Alpine.Core.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Services\Alpine.Services.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Services\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\Alpine Pacific\Alpine.Services\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\Alpine Pacific\Alpine.Services\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\Alpine Pacific\Alpine.Services\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\Alpine Pacific\Alpine.Services\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\Alpine Pacific\Alpine.Services\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Projects\Alpine Pacific\Alpine.Services\packages.config" />
+  <event action="Analyze" type="Success" name="Alpine.Services" path="C:\Projects\Alpine Pacific\Alpine.Services\Alpine.Services.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\Alpine.Repository.NHibernate.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\packages.config" />
+  <event action="Analyze" type="Success" name="Alpine.Repository.NHibernate" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\Alpine.Repository.NHibernate.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Alpine.Mvc.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Mvc\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\Alpine Pacific\Alpine.Mvc\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\Alpine Pacific\Alpine.Mvc\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\Alpine Pacific\Alpine.Mvc\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\Alpine Pacific\Alpine.Mvc\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\Alpine Pacific\Alpine.Mvc\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Projects\Alpine Pacific\Alpine.Mvc\packages.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Views\Web.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Views\Web.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Views\Web.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Views\Web.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Views\Web.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Views\Web.config" />
+  <event action="Analyze" type="Success" name="Web.config" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Views\Web.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.config" />
+  <event action="Analyze" type="Success" name="Web.config" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Web.Debug.config" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Web.Release.config" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Alpine.Mvc" path="C:\Projects\Alpine Pacific\Alpine.Mvc\Alpine.Mvc.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Infrastructure\Alpine.Infrastructure.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Infrastructure\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\Alpine Pacific\Alpine.Infrastructure\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\Alpine Pacific\Alpine.Infrastructure\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\Alpine Pacific\Alpine.Infrastructure\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\Alpine Pacific\Alpine.Infrastructure\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\Alpine Pacific\Alpine.Infrastructure\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Projects\Alpine Pacific\Alpine.Infrastructure\packages.config" />
+  <event action="Analyze" type="Success" name="Alpine.Infrastructure" path="C:\Projects\Alpine Pacific\Alpine.Infrastructure\Alpine.Infrastructure.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Controllers\Alpine.Controllers.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Controllers\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\Alpine Pacific\Alpine.Controllers\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\Alpine Pacific\Alpine.Controllers\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\Alpine Pacific\Alpine.Controllers\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\Alpine Pacific\Alpine.Controllers\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\Alpine Pacific\Alpine.Controllers\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Projects\Alpine Pacific\Alpine.Controllers\packages.config" />
+  <event action="Analyze" type="Success" name="Alpine.Controllers" path="C:\Projects\Alpine Pacific\Alpine.Controllers\Alpine.Controllers.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Web\Alpine.Web.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Web\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\Alpine Pacific\Alpine.Web\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\Alpine Pacific\Alpine.Web\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\Alpine Pacific\Alpine.Web\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\Alpine Pacific\Alpine.Web\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\Alpine Pacific\Alpine.Web\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Projects\Alpine Pacific\Alpine.Web\packages.config" />
+  <event action="Analyze" type="Success" name="Alpine.Web" path="C:\Projects\Alpine Pacific\Alpine.Web\Alpine.Web.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\Alpine.Repository.NHibernate.Tests.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\App.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\packages.config" />
+  <event action="Analyze" type="Success" name="Alpine.Repository.NHibernate.Tests" path="C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate.Tests\Alpine.Repository.NHibernate.Tests.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Services.Test\Alpine.Services.Test.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Services.Test\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\Alpine Pacific\Alpine.Services.Test\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\Alpine Pacific\Alpine.Services.Test\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\Alpine Pacific\Alpine.Services.Test\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\Alpine Pacific\Alpine.Services.Test\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\Alpine Pacific\Alpine.Services.Test\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="C:\Projects\Alpine Pacific\Alpine.Services.Test\App.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Services.Test\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\Alpine Pacific\Alpine.Services.Test\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\Alpine Pacific\Alpine.Services.Test\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\Alpine Pacific\Alpine.Services.Test\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\Alpine Pacific\Alpine.Services.Test\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\Alpine Pacific\Alpine.Services.Test\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Projects\Alpine Pacific\Alpine.Services.Test\packages.config" />
+  <event action="Analyze" type="Success" name="Alpine.Services.Test" path="C:\Projects\Alpine Pacific\Alpine.Services.Test\Alpine.Services.Test.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Reports\Alpine.Reports.csproj" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Projects\Alpine Pacific\Alpine.Reports\About.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Projects\Alpine Pacific\Alpine.Reports\About.aspx" />
+  <event action="Analyze" type="Success" name="About.aspx" path="C:\Projects\Alpine Pacific\Alpine.Reports\About.aspx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Reports\Bundle.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\Alpine Pacific\Alpine.Reports\Bundle.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\Alpine Pacific\Alpine.Reports\Bundle.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\Alpine Pacific\Alpine.Reports\Bundle.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\Alpine Pacific\Alpine.Reports\Bundle.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\Alpine Pacific\Alpine.Reports\Bundle.config" />
+  <event action="Analyze" type="Success" name="Bundle.config" path="C:\Projects\Alpine Pacific\Alpine.Reports\Bundle.config" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Projects\Alpine Pacific\Alpine.Reports\Contact.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Projects\Alpine Pacific\Alpine.Reports\Contact.aspx" />
+  <event action="Analyze" type="Success" name="Contact.aspx" path="C:\Projects\Alpine Pacific\Alpine.Reports\Contact.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Projects\Alpine Pacific\Alpine.Reports\Default.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Projects\Alpine Pacific\Alpine.Reports\Default.aspx" />
+  <event action="Analyze" type="Success" name="Default.aspx" path="C:\Projects\Alpine Pacific\Alpine.Reports\Default.aspx" />
+  <event action="Analyze" type="Success" name="Report1.resx" path="C:\Projects\Alpine Pacific\Alpine.Reports\Report1.resx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Projects\Alpine Pacific\Alpine.Reports\Reports.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Projects\Alpine Pacific\Alpine.Reports\Reports.aspx" />
+  <event action="Analyze" type="Success" name="Reports.aspx" path="C:\Projects\Alpine Pacific\Alpine.Reports\Reports.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Projects\Alpine Pacific\Alpine.Reports\Site.Master" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Projects\Alpine Pacific\Alpine.Reports\Site.Master" />
+  <event action="Analyze" type="Success" name="Site.Master" path="C:\Projects\Alpine Pacific\Alpine.Reports\Site.Master" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.config" />
+  <event action="Analyze" type="Success" name="Web.config" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Web.Debug.config" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Web.Release.config" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Alpine.Reports" path="C:\Projects\Alpine Pacific\Alpine.Reports\Alpine.Reports.csproj" />
+  <event action="Analyze" type="Success" name="Alpine" path="C:\Projects\Alpine Pacific\Alpine.sln" />
+  <event action="Upgrade" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Reports\Alpine.Reports.csproj" />
+  <event action="Upgrade" type="Success" name="Report1.resx" path="C:\Projects\Alpine Pacific\Alpine.Reports\Report1.resx" />
+  <event action="Upgrade" type="Success" name="Register Directives" path="C:\Projects\Alpine Pacific\Alpine.Reports\Reports.aspx" />
+  <event action="Upgrade" type="Success" name="Reports.aspx" path="C:\Projects\Alpine Pacific\Alpine.Reports\Reports.aspx" />
+  <event action="Upgrade" type="Success" name="Assembly References" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.config" />
+  <event action="Upgrade" type="Success" name="Http Handlers" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.config" />
+  <event action="Upgrade" type="Success" name="Handlers (IIS7+)" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.config" />
+  <event action="Upgrade" type="Success" name="Web.config" path="C:\Projects\Alpine Pacific\Alpine.Reports\Web.config" />
+  <event action="Upgrade" type="Success" name="Alpine.Reports" path="C:\Projects\Alpine Pacific\Alpine.Reports\Alpine.Reports.csproj" />
+  <event action="Upgrade" type="Success" name="Alpine" path="C:\Projects\Alpine Pacific\Alpine.sln" />
+</log>

@@ -1,0 +1,54 @@
+﻿@model Alpine.Controllers.ViewModels.UserAccount.UserAccountView
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        @Styles.Render("~/Content/css")
+        <!--[if IE]> <link href="css/ie.css" rel="stylesheet" type="text/css"> <![endif]-->
+        @Scripts.Render("~/bundles/jquery")
+        @*<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>*@
+        @*@Scripts.Render("~/bundles/jqueryui")*@
+        @Scripts.Render("~/bundles/jqueryval")
+        @Scripts.Render("~/bundles/alpine")
+        @*<script src="~/Scripts/plugins/charts/excanvas.min.js"></script>
+        <script src="~/Scripts/kendo.all.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/charts/jquery.sparkline.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/ui/jquery.collapsible.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/forms/jquery.inputlimiter.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/forms/jquery.maskedinput.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/forms/jquery.tagsinput.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/forms/jquery.uniform.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/forms/jquery.select2.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/tables/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/ui/jquery.fullcalendar.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/ui/jquery.timepicker.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/plugins/bootstrap/bootstrap.min.js"></script>*@
+        @Scripts.Render("~/bundles/alpine2")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <section id="topnav">
+            @Html.Action("Menu", "TopNavBar")
+        </section>
+        <div id="mainwrapper" class="wrapper">
+
+	        <!-- Left sidebar -->
+            <section id="sidebar">
+                @Html.Action("Navigation", "Sidebar", new { sideBar = @Model.SideBar });
+            </section>
+            <!-- /left sidebar -->
+            <!-- Main content -->
+            <div class="content">
+                <div id="body">
+                    @RenderSection("featured", required: false)
+                    <section class="content-wrapper main-content clear-fix">
+                        @RenderBody()
+                    </section>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+D:\Projects\Alpine\Alpine.Repository.NHibernate\bin\Debug\Alpine.Repository.NHibernate.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate\bin\Debug\Alpine.Repository.NHibernate.pdb
+D:\Projects\Alpine\Alpine.Repository.NHibernate\bin\Debug\Alpine.Core.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate\bin\Debug\FluentNHibernate.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate\bin\Debug\Iesi.Collections.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate\bin\Debug\log4net.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate\bin\Debug\NHibernate.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate\bin\Debug\Alpine.Core.pdb
+D:\Projects\Alpine\Alpine.Repository.NHibernate\bin\Debug\FluentNHibernate.xml
+D:\Projects\Alpine\Alpine.Repository.NHibernate\bin\Debug\Iesi.Collections.xml
+D:\Projects\Alpine\Alpine.Repository.NHibernate\bin\Debug\log4net.xml
+D:\Projects\Alpine\Alpine.Repository.NHibernate\bin\Debug\NHibernate.xml
+D:\Projects\Alpine\Alpine.Repository.NHibernate\obj\Debug\Alpine.Repository.NHibernate.csprojResolveAssemblyReference.cache
+D:\Projects\Alpine\Alpine.Repository.NHibernate\obj\Debug\Alpine.Repository.NHibernate.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate\obj\Debug\Alpine.Repository.NHibernate.pdb
+D:\Projects\Alpine\Alpine.Repository.NHibernate\bin\Debug\Alpine.Infrastructure.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate\bin\Debug\Alpine.Infrastructure.pdb
+D:\Projects\Alpine\Alpine.Repository.NHibernate\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\Alpine\Alpine.Repository.NHibernate\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\bin\Debug\Alpine.Repository.NHibernate.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\bin\Debug\Alpine.Repository.NHibernate.pdb
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\bin\Debug\Alpine.Core.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\bin\Debug\Alpine.Infrastructure.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\bin\Debug\FluentNHibernate.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\bin\Debug\Iesi.Collections.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\bin\Debug\log4net.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\bin\Debug\NHibernate.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\bin\Debug\Alpine.Core.pdb
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\bin\Debug\Alpine.Infrastructure.pdb
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\bin\Debug\FluentNHibernate.xml
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\bin\Debug\Iesi.Collections.xml
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\bin\Debug\log4net.xml
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\bin\Debug\NHibernate.xml
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\obj\Debug\Alpine.Repository.NHibernate.csprojResolveAssemblyReference.cache
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\obj\Debug\Alpine.Repository.NHibernate.dll
+C:\Projects\Alpine Pacific\Alpine.Repository.NHibernate\obj\Debug\Alpine.Repository.NHibernate.pdb

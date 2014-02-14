@@ -1,0 +1,371 @@
+﻿@using Alpine.Core.Domain.Payment
+@model Alpine.Controllers.ViewModels.PaymentView
+<script src="~/Scripts/alpine/alpine.js"></script>
+<div style="margin-top: 50px;" />
+<div class="page-header">
+    <h5>Payments</h5>
+    <div class="pull-right">
+        <a data-toggle="modal" href="#myModal"  id="btnAddPayment"   class="btn btn-normal btn-success" title="Add New Payment Template" >
+            <i class="font-plus"></i>Add Payment
+        </a>
+    </div>
+</div>
+<div class="row-fluid">
+    @foreach( var payment in Model.Payments)
+    {
+        Model.SelectedPayment = payment;
+    <div class="span4">
+        <div class="block well">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <h5>@payment.Name</h5>
+                    <div class="nav pull-right">
+                        <a href="#" class="dropdown-toggle just-icon" data-toggle="dropdown"><i class="font-cog"></i></a>
+                        <ul class="dropdown-menu pull-right">
+                            <li>
+                               <button id="btnSavePayment" 
+                                itemid="@payment.ID.ToString()" 
+                                type="button" 
+                                class="savePayment btn btn-normal btn-success" >
+                                    <i class="icon-plus"></i>Save Payment
+                                </button>
+                            </li>
+                            <li>
+                                <button id="btnDeletePayment" 
+                                itemid="@payment.ID.ToString()" 
+                                type="button" 
+                                class="deletePayment btn btn-normal btn-danger" >
+                                    <i class="icon-remove"></i>Delete Payment
+                                </button>
+                            </li>
+                            <li>
+                                <button id="btnUpdateGrowers" 
+                                itemid="@payment.ID.ToString()" 
+                                title="Update Growers" 
+                                class="updategrowers btn btn-small btn-info">
+                                    <i class="icon-ok"></i> Update Growers
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="body">
+                <div class="control-group clearfix">
+                    <div>
+                        <label class="control-label">
+                            Payment Type:
+                            <span class="req">*</span>
+                        </label>
+                        <div class="controls">
+                                @Html.DropDownListFor(m => m.SelectedPayment.PaymentType, Model.PaymentTypes, " -- Select Payment Type --", new { @id = "paymenttypeddl_" + @payment.ID.ToString()})
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group clearfix">
+                    <div>
+                        <label class="control-label">
+                            Name:
+                            <span class="req">*</span>
+                        </label>
+                        <div class="controls">
+                                @Html.TextBoxFor(m => m.SelectedPayment.Name, new {  @class = "span12", @id = "paymentname_" + @payment.ID.ToString()})
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group clearfix">
+                    <div>
+                        <label class="control-label">
+                            Description:
+                            <span class="req">*</span>
+                        </label>
+                        <div class="controls">
+                                @Html.TextBoxFor(m => m.SelectedPayment.Description, new {  @class = "span12", @id = "paymentdescription_" + @payment.ID.ToString()})
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group clearfix">
+                    <div>
+                        <label class="control-label">
+                            Payment Date:
+                            <span class="req">*</span>
+                        </label>
+                        <div class="controls">
+                                @Html.TextBoxFor(m => m.SelectedPayment.PaymentDate, new {  @class = "required datepicker span12", @id = "paymentdate_" + @payment.ID.ToString(), @Value = Model.SelectedPayment.PaymentDate.ToShortDateString()})
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group clearfix">
+                    <div>
+                <strong>&nbsp;&nbsp;Varieties</strong><br />
+                @Html.DropDownList("newvarietyddl_" + @payment.ID.ToString(), Model.VarietiesDDL, " -- Select Variety --", new { @class = "span6"})
+                <button id="btnAddVariety" type="button" paymentid="@payment.ID.ToString()" class="addVariety btn btn-normal btn-success" >
+                    <i class="font-add"></i>Add Variety
+                </button>
+                    </div>
+                </div>
+                @foreach (var variety in payment.Varieties)
+                { 
+                    <div class="control-group clearfix">
+                        <div class="span12">
+                            <label class="control-label">
+                                @variety.Variety.Name:
+                            </label>
+                            <div class="controls">
+                                @Html.TextBoxFor(m => m.SelectedPayment.Varieties.ElementAt(m.SelectedPayment.Varieties.IndexOf(variety)).Price, new {  @class = "span6 paymentvariety_" + @payment.ID.ToString(), @id = "variety_" + @variety.ID.ToString(), @varietyid = @variety.VarietyID.ToString(), @nutwareid = @variety.NutwareID.ToString(), @pvid = @variety.ID.ToString()})
+                                <button id="btnRemoveVariety" vid="@variety.ID.ToString()" type="button"  class="removeVariety btn btn-normal btn-danger" >
+                                        <i class="font-remove"></i>Remove
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                }
+                <div class="form-actions align-left">
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+        Model.SelectedPayment = new Alpine.Core.Domain.Payment.Payment();
+    }
+</div>
+<div style="margin-top: 75px;" />
+
+<!-- Dialog content -->
+            <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h5 id="myModalLabel">Create New Payment Template</h5>
+                </div>
+                <div class="modal-body">
+                <form class="form-horizontal">
+                    <div id="divSecurityContainer" class="row-fluid">
+                        @using (Html.BeginForm(null, null, FormMethod.Post, new { @id = "newPaymentForm" }))
+        {
+                        <div class="control-group clearfix">
+                            <div class="span12">
+                                <label class="control-label">
+                                    Payment Name:
+                                    <span class="req">*</span>
+                                </label>
+                                <div class="controls">
+                                        @Html.TextBoxFor(m => m.SelectedPayment.Name, new { @class = "required span12", @id = "modalname"})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group clearfix">
+                            <div class="span12">
+                                <label class="control-label">
+                                    Payment Type:
+                                    <span class="req">*</span>
+                                </label>
+                                <div class="controls">
+                                        @Html.DropDownListFor(m => m.SelectedPayment.PaymentType, Model.PaymentTypes, " -- Select Payment Type --", new { @id = "modalpaymenttypeddl"})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group clearfix">
+                            <div class="span12">
+                                <label class="control-label">
+                                    Description:
+                                    <span class="req">*</span>
+                                </label>
+                                <div class="controls">
+                                        @Html.TextBoxFor(m => m.SelectedPayment.Description, new { @class = "required span12", @id = "modaldescription"})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group clearfix">
+                            <div class="span12">
+                                <label class="control-label">
+                                    Payment Date:
+                                    <span class="req">*</span>
+                                </label>
+                                <div class="controls">
+                                    @Html.TextBoxFor(m => m.SelectedPayment.PaymentDate, new { @class = "required datepicker", @id = "modalpaymentdate", @Value = DateTime.Now.ToShortDateString()})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-actions modal-footer">
+                            <button id="btnSaveNewPayment" title="Save Payment" class="btn btn-small btn-info">
+                                <i class="icon-plus"></i> Save Payment
+                            </button>
+                            <a href='#' title="Cancel" data-dismiss="modal" class="btn btn-small btn-danger">
+                                <i class="icon-remove"></i> Cancel
+                            </a>               
+                        </div>
+                        }
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /dialog content -->
+
+<script type="text/javascript">
+    //Add Payment Variety
+    $(".addVariety").click(function (e) {
+        e.preventDefault();
+        var variety = new PaymentVariety();
+        variety.PaymentID = $(this).attr("paymentid");
+        variety.VarietyID = $("#newvarietyddl_" + variety.PaymentID + " option:selected").val();
+        variety.Price = 0.0;
+
+        $.ajax({
+            url: baseUrl + 'api/Payments/AddVarietyToPaymentTemplate',
+            type: 'POST',
+            data: JSON.stringify(variety),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                //window.location = data.split(':')[2];
+                loadPaymentTemplates();
+                $('#mainwrapper').effect("highlight", { color: "#7fd658" }, 1000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+
+        //
+    });
+
+    $(".removeVariety").click(function (e) {
+        e.preventDefault();
+        var variety = new PaymentVariety();
+        variety.ID = $(this).attr("vid");
+        $.ajax({
+            url: baseUrl + 'api/Payments/DeletePaymentVarietyFromTemplate',
+            type: 'POST',
+            data: JSON.stringify(variety),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                //window.location = data.split(':')[2];
+                loadPaymentTemplates();
+                $('#mainwrapper').effect("highlight", { color: "#7fd658" }, 1000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    });
+
+    //Save Payment
+    $(".savePayment").click(function (e) {
+        e.preventDefault();
+        var payment = new Payment();
+        payment.Name = $("#paymentname_" + $(this).attr("itemid")).val();
+        payment.Description = $("#paymentdescription_" + $(this).attr("itemid")).val();
+        payment.PaymentDate = $("#paymentdate_" + $(this).attr("itemid")).val();
+        payment.ID = $(this).attr("itemid");
+        payment.PaymentType = $("#paymenttypeddl_" + $(this).attr("itemid") + " option:selected").val();
+        var varieties = [];
+        $('.paymentvariety_' + payment.ID.toString()).each(function () {
+            var variety = new PaymentVariety();
+            variety.Price = $(this).val();
+            variety.VarietyID = $(this).attr("varietyid");
+            variety.ID = $(this).attr("pvid");
+            variety.PaymentID = payment.ID;
+            variety.NutwareID = $(this).attr("nutwareid");
+            varieties.push(variety);
+        });
+        $.ajax({
+            url: baseUrl + 'api/Payments/UpdatePayment',
+            type: 'POST',
+            data: JSON.stringify({ Payment: payment, Varieties: varieties }),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                //window.location = data.split(':')[2];
+                $('#mainwrapper').effect("highlight", { color: "#7fd658" }, 1000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    });
+
+    //Save Payment
+    $(".updategrowers").click(function (e) {
+        e.preventDefault();
+        var payment = new Payment();
+        payment.Name = $("#paymentname_" + $(this).attr("itemid")).val();
+        payment.Description = $("#paymentdescription_" + $(this).attr("itemid")).val();
+        payment.PaymentDate = $("#paymentdate_" + $(this).attr("itemid")).val();
+        payment.ID = $(this).attr("itemid");
+        payment.PaymentType = $("#paymenttypeddl_" + $(this).attr("itemid") + " option:selected").val();
+        var varieties = [];
+        $('.paymentvariety_' + payment.ID.toString()).each(function () {
+            var variety = new PaymentVariety();
+            variety.Price = $(this).val();
+            variety.VarietyID = $(this).attr("varietyid");
+            variety.ID = $(this).attr("pvid");
+            variety.PaymentID = payment.ID;
+            varieties.push(variety);
+        });
+        $.ajax({
+            url: baseUrl + 'api/Payments/UpdateGrowersPaymentVarieties',
+            type: 'POST',
+            data: JSON.stringify({ Payment: payment, Varieties: varieties }),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                //window.location = data.split(':')[2];
+                $('#mainwrapper').effect("highlight", { color: "#7fd658" }, 1000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    });
+
+    $(".deletePayment").click(function (e) {
+        e.preventDefault();
+        var payment = new Payment();
+        payment.ID = $(this).attr("itemid");
+
+        $.ajax({
+            url: baseUrl + 'api/Payments/DeletePayment',
+            type: 'POST',
+            data: JSON.stringify(payment),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                //window.location = data.split(':')[2];
+                loadPaymentTemplates();
+                $('#mainwrapper').effect("highlight", { color: "#7fd658" }, 1000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    });
+
+    $("#btnSaveNewPayment").click(function (e) {
+        e.preventDefault();
+        var payment = new Payment();
+        payment.Name = $("#modalname").val();
+        payment.Description = $("#modaldescription").val();
+        payment.PaymentDate = $("#modalpaymentdate").val();
+        payment.PaymentType = $("#modalpaymenttypeddl option:selected").val();
+        payment.GrowerID = -1;
+        payment.CropYear = $("#ddlcropyears option:selected").val();
+        payment.IsTemplate = true;
+
+        $.ajax({
+            url: baseUrl + 'api/Payments/CreatePaymentTemplate',
+            type: 'POST',
+            data: JSON.stringify(payment),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                window.location = "/MasterSchedule";
+                $('#mainwrapper').effect("highlight", { color: "#7fd658" }, 1000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    });
+</script>

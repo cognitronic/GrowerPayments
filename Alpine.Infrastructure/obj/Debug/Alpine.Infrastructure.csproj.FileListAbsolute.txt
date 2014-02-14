@@ -1,0 +1,18 @@
+D:\Projects\Alpine\Alpine.Infrastructure\bin\Debug\Alpine.Infrastructure.dll
+D:\Projects\Alpine\Alpine.Infrastructure\bin\Debug\Alpine.Infrastructure.pdb
+D:\Projects\Alpine\Alpine.Infrastructure\bin\Debug\log4net.dll
+D:\Projects\Alpine\Alpine.Infrastructure\bin\Debug\log4net.xml
+D:\Projects\Alpine\Alpine.Infrastructure\obj\Debug\Alpine.Infrastructure.dll
+D:\Projects\Alpine\Alpine.Infrastructure\obj\Debug\Alpine.Infrastructure.pdb
+D:\Projects\Alpine\Alpine.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\Alpine\Alpine.Infrastructure\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\Alpine\Alpine.Infrastructure\obj\Debug\Alpine.Infrastructure.csprojResolveAssemblyReference.cache
+C:\Projects\Alpine Pacific\Alpine.Infrastructure\bin\Debug\Alpine.Infrastructure.dll
+C:\Projects\Alpine Pacific\Alpine.Infrastructure\bin\Debug\Alpine.Infrastructure.pdb
+C:\Projects\Alpine Pacific\Alpine.Infrastructure\bin\Debug\log4net.dll
+C:\Projects\Alpine Pacific\Alpine.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\Alpine Pacific\Alpine.Infrastructure\bin\Debug\log4net.xml
+C:\Projects\Alpine Pacific\Alpine.Infrastructure\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Alpine Pacific\Alpine.Infrastructure\obj\Debug\Alpine.Infrastructure.csprojResolveAssemblyReference.cache
+C:\Projects\Alpine Pacific\Alpine.Infrastructure\obj\Debug\Alpine.Infrastructure.dll
+C:\Projects\Alpine Pacific\Alpine.Infrastructure\obj\Debug\Alpine.Infrastructure.pdb

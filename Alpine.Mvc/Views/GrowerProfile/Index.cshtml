@@ -1,0 +1,165 @@
+﻿@using Alpine.Core
+
+@model Alpine.Controllers.ViewModels.UserAccount.UserAccountView
+
+
+@{
+    ViewBag.Title = "Grower Profiles - Grower Payments System";
+}
+<script src="/Scripts/alpine/alpine.js"></script>
+<script src="/Scripts/alpine/domainObjects.js"></script>
+@section featured {
+    <section class="featured">
+        <div class="page-header"><!-- Page header -->
+            <h5>
+                <i class="font-calendar"></i>
+                Grower Profiles
+            </h5>
+            <div class="pull-right">
+                <span style="font-size: 16px; font-weight: bold;"> Growers:&nbsp; </span>
+            @Html.DropDownList("ddlgrowers", @Model.Growers, "-- Select Grower --")&nbsp;&nbsp;
+                <span style="font-size: 16px; font-weight: bold;"> Crop Year:&nbsp; </span>
+            @Html.DropDownList("ddlcropyears", @Model.CropYears, new { @style = "width: 75px;"})
+                <button id="btnLoadProfile" type="button" class="btn btn-normal btn-info" >
+                    <i class="icon-user"></i> Load Profile
+                </button>
+            </div>
+        </div><!-- /page header -->
+        
+        <div id="profileContainer" class="body">
+            
+            <div class="row-fluid">
+            	<div class="span12">
+                    <div class="block well">
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <h5>
+                                    Payees
+                                    
+                                </h5><a data-toggle="modal" href="#myModal"  id="btnAddPayee"   class="btn btn-normal btn-success" title="Add New Payee" >
+            <i class="icon-plus"></i>Add Payee
+        </a>
+                                <div class="nav pull-right">
+                                    <a class="dropdown-toggle just-icon" data-toggle="collapse" data-target="#payees"><i class="font-resize-vertical"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="payees" class="collapse out">
+                            <div class="span12">
+                                @Html.Action("Payees", "GrowerProfile")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+            	<div class="span4">
+                    <!-- Vertical bars -->
+                	<div class="body">
+                        <div class="block well">
+                            <div class="navbar">
+                                <div class="navbar-inner">
+                                    <h5>Assessments</h5>
+                                    <div class="nav pull-right">
+                                        <a class="dropdown-toggle just-icon" data-toggle="collapse" data-target="#assessments"><i class="font-resize-vertical"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="assessments" class="collapse in table-overflow">
+                               @*@Html.Action("Assessments", "GrowerProfile")*@
+                            </div>
+                        </div>
+                	</div>
+                    <!-- /vertical bars -->
+                </div>
+                <div class="span4">
+                	<!-- Horizontal bars -->
+                	<div class="well block">
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <h5>Notes</h5>
+                                @Html.DropDownList("ddlnotefilter", @Model.GrowerNotesStatusFilter, new { @style = "width: 75px;"})&nbsp;
+                                <button id="btnLoadNotes" type="button" class="btn btn-normal btn-success" >
+                    <i class="font-add"></i>Load Notes
+                </button>
+                                <div class="nav pull-right">
+                                    <a class="dropdown-toggle just-icon" data-toggle="collapse" data-target="#notes"><i class="font-resize-vertical"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="notes" class="collapse in">
+                            
+                        </div>
+                    </div>
+                    <!-- /horizontal bars -->
+                </div>
+                <div class="span4">
+                    <!-- Vertical bars -->
+                	<div class="body">
+                        <div class="block well">
+                            <div class="navbar">
+                                <div class="navbar-inner">
+                                    <h5>Profile Settings</h5>
+                                    <div class="nav pull-right">
+                                        <a class="dropdown-toggle just-icon" data-toggle="collapse" data-target="#settings"><i class="font-resize-vertical"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="settings" class="collapse in table-overflow">
+                               @*@Html.Action("Assessments", "GrowerProfile")*@
+                            </div>
+                        </div>
+                	</div>
+                    <!-- /vertical bars -->
+                </div>
+            </div>
+            
+            <div id="payments" class="collapse in">
+                
+                        </div>
+            @*<div id="assessmentsContainer" >
+                @Html.Action("Assessments", "GrowerProfiles")
+            </div>
+            <div id="paymentsContainer">
+                @Html.Action("Payments", "GrowerProfiles")
+            </div>*@
+            </div>
+            
+    </section>
+}
+<script type="text/javascript">
+    $("#ddlcropyears").val(@SecurityContextManager.Current.CurrentCropYear);
+    
+    $("#btnLoadProfile").click(function (e) {
+        e.preventDefault();  //prevent default form submit behaviour
+        loadGrowerAssessments($("#ddlcropyears option:selected").val(), $("#ddlgrowers option:selected").val());
+        loadGrowerNotes($("#ddlcropyears option:selected").val(), $("#ddlgrowers option:selected").val(), $("#ddlnotefilter option:selected").val());
+        loadGrowerSettings($("#ddlcropyears option:selected").val(), $("#ddlgrowers option:selected").val());
+        loadGrowerPayments($("#ddlcropyears option:selected").val(), $("#ddlgrowers option:selected").val());
+        loadGrowerPayees($("#ddlcropyears option:selected").val(), $("#ddlgrowers option:selected").val());
+        $("#profileContainer").effect("highlight", { color: "#7fd658" }, 3000);
+    });
+
+    
+
+    $("#btnLoadNotes").click(function (e) {
+        e.preventDefault();
+        var gn = new GrowerNote();
+        gn.GrowerID = $("#ddlgrowers option:selected").val();
+        gn.IsActive = $("#ddlnotefilter option:selected").val();
+        $.ajax({
+            url: baseUrl + 'api/GrowerProfile/GetGrowerNotesByStatus',
+            type: 'POST',
+            data: JSON.stringify(gn),
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            success: function (data) {
+                loadGrowerNotesByStatus($("#ddlcropyears option:selected").val(), $("#ddlgrowers option:selected").val(), $("#ddlnotefilter option:selected").val());
+                $("#notes").effect("highlight", { color: "#7fd658" }, 3000);
+            },
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    });
+</script>
